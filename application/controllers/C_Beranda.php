@@ -20,9 +20,9 @@ class C_Beranda extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('head');
-		$this->load->view('navbar');
-		$this->load->view('index');
-		$this->load->view('footer');
+		$this->load->view('templates/V_Head');
+		$this->load->view('templates/V_Navbar');
+		$this->load->view('V_Home');
+		$this->load->view('templates/V_Footer');
 	}
 }
