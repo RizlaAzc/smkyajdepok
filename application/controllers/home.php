@@ -20,7 +20,8 @@ class home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('templates/V_Head');
+		$title['title'] = "SMK YAJ Depok";
+		$this->load->view('templates/V_Head', $title);
 		$this->load->view('templates/V_Navbar');
 		$this->load->view('pages/V_Home');
 		$this->load->view('pages/V_About');
