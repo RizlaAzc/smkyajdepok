@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_Beranda extends CI_Controller {
+class home extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,17 @@ class C_Beranda extends CI_Controller {
 	{
 		$this->load->view('templates/V_Head');
 		$this->load->view('templates/V_Navbar');
-		$this->load->view('V_Home');
+		$this->load->view('pages/V_Home');
+		$this->load->view('pages/V_About');
+		$this->load->view('pages/V_Services');
+		$this->load->view('pages/V_Team');
+		$this->load->view('pages/V_Reviews');
+		$this->load->view('pages/V_Portfolio');
+		$this->load->view('pages/V_Pricing');
+		$this->load->view('pages/V_Testimonials');
+		// $this->load->view('pages/V_Blog');
+		$this->load->view('pages/V_Suscribe');
+		$this->load->view('pages/V_Contact');
 		$this->load->view('templates/V_Footer');
 	}
 }
