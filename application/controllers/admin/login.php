@@ -20,7 +20,7 @@ class login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$title['title'] = "SMK YAJ Depok";
+		$title['title'] = "SMK YAJ Depok - Admin";
 		$this->load->view('admin/templates/V_Head', $title);
 		$this->load->view('admin/templates/V_Navbar');
 		$this->load->view('admin/pages/V_Home');
