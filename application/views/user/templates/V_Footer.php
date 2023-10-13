@@ -7,10 +7,10 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2><span>YAJ</span> </h2>
+                <h4>sosial media</h4>
                 </div>
 
-                <p>Religious-based schools Information Technology-based schools School buildings are not integrated with other educational units. It has the characteristics of a different, unique and attractive daily uniform. Student coaching system that is integrated with achievement. Study Room and complete practical equipment.</p>
+                <p>you can visit our social media &#9889;</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
@@ -53,7 +53,7 @@
                 <h4>Instagram</h4>
                 <div class="flicker-img">
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/smk.jpg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/2.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/ykk.jpeg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/3.jpg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/4.jpg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/5.jpg" alt=""></a>
