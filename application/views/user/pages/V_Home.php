@@ -12,7 +12,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">The Best Business Information </h2>
                 <p class="animate__animated animate__fadeInUp">We're In The Business Of Helping You Start Your Business</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ</a>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
                 <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for Your Family</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ </a>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
                 <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ</a>
               </div>
             </div>
           </div>

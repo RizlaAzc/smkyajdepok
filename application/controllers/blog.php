@@ -20,17 +20,17 @@ class blog extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('templates/V_Head');
-		$this->load->view('templates/V_Navbar');
-		$this->load->view('pages/blogs/V_BlogPage');
-		$this->load->view('templates/V_Footer');
+		$this->load->view('user/templates/V_Head');
+		$this->load->view('user/templates/V_Navbar');
+		$this->load->view('user/pages/blogs/V_BlogPage');
+		$this->load->view('user/templates/V_Footer');
 	}
 
 	public function detail()
 	{
-		$this->load->view('templates/V_Head');
-		$this->load->view('templates/V_Navbar');
-		$this->load->view('pages/blogs/V_BlogDetails');
-		$this->load->view('templates/V_Footer');
+		$this->load->view('user/templates/V_Head');
+		$this->load->view('user/templates/V_Navbar');
+		$this->load->view('user/pages/blogs/V_BlogDetails');
+		$this->load->view('user/templates/V_Footer');
 	}
 }

@@ -21,19 +21,19 @@ class home extends CI_Controller {
 	public function index()
 	{
 		$title['title'] = "SMK YAJ Depok";
-		$this->load->view('templates/V_Head', $title);
-		$this->load->view('templates/V_Navbar');
-		$this->load->view('pages/V_Home');
-		$this->load->view('pages/V_About');
-		$this->load->view('pages/V_Services');
-		$this->load->view('pages/V_Team');
-		$this->load->view('pages/V_Reviews');
-		$this->load->view('pages/V_Portfolio');
-		$this->load->view('pages/V_Pricing');
-		$this->load->view('pages/V_Testimonials');
-		// $this->load->view('pages/V_Blog');
-		$this->load->view('pages/V_Suscribe');
-		$this->load->view('pages/V_Contact');
-		$this->load->view('templates/V_Footer');
+		$this->load->view('user/templates/V_Head', $title);
+		$this->load->view('user/templates/V_Navbar');
+		$this->load->view('user/pages/V_Home');
+		$this->load->view('user/pages/V_About');
+		$this->load->view('user/pages/V_Services');
+		$this->load->view('user/pages/V_Team');
+		$this->load->view('user/pages/V_Reviews');
+		$this->load->view('user/pages/V_Portfolio');
+		$this->load->view('user/pages/V_Pricing');
+		$this->load->view('user/pages/V_Testimonials');
+		// $this->load->view('user/pages/V_Blog');
+		$this->load->view('user/pages/V_Suscribe');
+		$this->load->view('user/pages/V_Contact');
+		$this->load->view('user/templates/V_Footer');
 	}
 }
