@@ -7,23 +7,23 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2><span>e</span>Business</h2>
+                  <h2><span>YAJ</span> </h2>
                 </div>
 
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <p>Religious-based schools Information Technology-based schools School buildings are not integrated with other educational units. It has the characteristics of a different, unique and attractive daily uniform. Student coaching system that is integrated with achievement. Study Room and complete practical equipment.</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
+                      <a href="https://mobile.facebook.com/smkyajdepokofficiall?wtsid=rdr_00I3bHXieV3EunChx&_rdc=1&_rdr&refsrc=deprecated"><i class="bi bi-facebook"></i></a>
                     </li>
                     <li>
-                      <a href="#"><i class="bi bi-twitter"></i></a>
+                      <a href="https://x.com/paskibra_yaj?t=vc_CfhRcRLKLlIVs6c79WQ&s=08"><i class="bi bi-twitter"></i></a>
                     </li>
                     <li>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="https://instagram.com/smkyaj_official?igshid=MzRlODBiNWFlZA=="><i class="bi bi-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="https://youtube.com/@smkyajdepok2280?si=_wlsU_i7R_pV_h2L"><i class="bi bi-youtube"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -36,12 +36,12 @@
               <div class="footer-head">
                 <h4>information</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                 We came to learn and follow the rules...
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
+                  <p><span>Tel:</span> (021) 87900425</p>
+                  <p><span>Email:</span> @smkyajdepok.sch.id</p>
+                  <p><span>Working Hours:</span> 07.00 - 15.15 WIB</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
               <div class="footer-head">
                 <h4>Instagram</h4>
                 <div class="flicker-img">
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/1.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/smk.jpg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/2.jpg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/3.jpg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/4.jpg" alt=""></a>
@@ -71,7 +71,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                &copy; Copyright <strong>SMK YAJ</strong>. yayasan aridho jatimulya
               </p>
             </div>
             <div class="credits">
@@ -81,7 +81,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
             -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              Designed by <a>ASLAB</a>
             </div>
           </div>
         </div>
