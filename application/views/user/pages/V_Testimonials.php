@@ -20,7 +20,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/user/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="assets/user/img/testimonials/palukman.jpg" class="testimonial-img" alt="">
                 <h3>Lukmanul Hakim, S.Kom</h3>
                 <h4>Designer</h4>
                 <p>
