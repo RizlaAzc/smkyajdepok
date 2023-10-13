@@ -17,8 +17,8 @@
                 <div class="single-icon">
                   <i class="bi bi-phone"></i>
                   <p>
-                    Call: +1 5589 55488 55<br>
-                    <span>Monday-Friday (9am-5pm)</span>
+                    Call: 021-87900425<br>
+                    <span>Monday-Thursday (7am - 3:15pm)<br>Friday (7am - 11am)</span>
                   </p>
                 </div>
               </div>
@@ -29,8 +29,8 @@
                 <div class="single-icon">
                   <i class="bi bi-envelope"></i>
                   <p>
-                    Email: info@example.com<br>
-                    <span>Web: www.example.com</span>
+                    Email:  info@smkyajdepok.sch.id<br>
+                    <span>Web: www.smkyaj.com</span>
                   </p>
                 </div>
               </div>
@@ -41,8 +41,8 @@
                 <div class="single-icon">
                   <i class="bi bi-geo-alt"></i>
                   <p>
-                    Location: A108 Adam Street<br>
-                    <span>NY 535022, USA</span>
+                    Location: Arridho Street No. 166 <br>
+                    <span>Rt. 001/004 Jatimulya, Cilodong<br> Depok City West Java 16413</span>
                   </p>
                 </div>
               </div>
