@@ -10,9 +10,9 @@
           <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/1.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">The Best Business Information </h2>
-                <p class="animate__animated animate__fadeInUp">We're In The Business Of Helping You Start Your Business</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ</a>
+                <h2 class="animate__animated animate__fadeInDown">SMK YAJ DEPOK</h2>
+                <p class="animate__animated animate__fadeInUp">WELCOME TO OUR WEBSITE</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>
@@ -20,9 +20,9 @@
           <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
-                <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for Your Family</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ </a>
+                <h2 class="animate__animated animate__fadeInDown">VISI</h2>
+                <p class="animate__animated animate__fadeInUp">Making SMK YAJ a vocational high school that produces skilled, superior, independent and religious students</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>
@@ -30,9 +30,9 @@
           <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/3.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
-                <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">SMK YAJ</a>
+                <h2 class="animate__animated animate__fadeInDown">MOTTO</h2>
+                <p class="animate__animated animate__fadeInUp">We come to study and follow the rules</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>
