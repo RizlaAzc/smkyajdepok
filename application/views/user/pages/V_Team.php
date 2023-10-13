@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
-              <h2>Our special Team</h2>
+              <h2>Our Team</h2>
             </div>
           </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="assets/img/team/1.jpg" alt="">
+                  <img src="assets/user/img/team/paidham.jpg" alt="">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -36,8 +36,8 @@
                 </div>
               </div>
               <div class="team-content text-center">
-                <h4>Jhon Mickel</h4>
-                <p>Seo</p>
+                <h4>Idham Kholid</h4>
+                <p>School principal</p>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="assets/img/team/2.jpg" alt="">
+                  <img src="assets/user/img/team/kangyusuf.jpg" alt="">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -69,8 +69,8 @@
                 </div>
               </div>
               <div class="team-content text-center">
-                <h4>Andrew Arnold</h4>
-                <p>Web Developer</p>
+                <h4>Yusuf Zamzami</h4>
+                <p>Student Affairs</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="assets/img/team/3.jpg" alt="">
+                  <img src="assets/user/img/team/kangir.jpg" alt="">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -102,8 +102,8 @@
                 </div>
               </div>
               <div class="team-content text-center">
-                <h4>Lellien Linda</h4>
-                <p>Web Design</p>
+                <h4>Irkham Kardianto</h4>
+                <p>student council advisor</p>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="assets/img/team/4.jpg" alt="">
+                  <img src="assets/user/img/team/bumirna.jpg" alt="">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -135,8 +135,8 @@
                 </div>
               </div>
               <div class="team-content text-center">
-                <h4>Jhon Powel</h4>
-                <p>Seo Expert</p>
+                <h4>Mirna Meylani</h4>
+                <p>curriculum leader</p>
               </div>
             </div>
           </div>

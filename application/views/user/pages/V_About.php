@@ -14,7 +14,7 @@
             <div class="well-left">
               <div class="single-well">
                 <a href="#">
-                  <img src="assets/img/about/1.jpg" alt="">
+                  <img src="assets/user/img/about/1.jpg" alt="">
                 </a>
               </div>
             </div>

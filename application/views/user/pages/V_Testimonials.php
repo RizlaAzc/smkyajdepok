@@ -20,6 +20,19 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
+                <img src="assets/user/img/testimonials/pakidham.jpg" class="testimonial-img" alt="">
+                <h3>Idham Kholid, S.Ag, S.E.</h3>
+                <h4>School principal</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Don't be too busy looking for the perfect one if a simple one can make you happy.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
                 <img src="assets/user/img/testimonials/palukman.jpg" class="testimonial-img" alt="">
                 <h3>Lukmanul Hakim, S.Kom</h3>
                 <h4>Designer</h4>
@@ -33,25 +46,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/user/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/user/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
+                <img src="assets/user/img/testimonials/budea.jpg" class="testimonial-img" alt="">
+                <h3>Dea Anggi Rahmawati, A.Md.MI</h3>
                 <h4>Freelancer</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Don't think too much about other people's expectations of you. Just be yourself, that's better.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -59,12 +59,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/user/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="assets/user/img/testimonials/Martin.jpeg" class="testimonial-img" alt="">
+                <h3>Martin Luther King</h3>
+                <h4>social activist</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Intelligence coupled with character is the goal of true education.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
