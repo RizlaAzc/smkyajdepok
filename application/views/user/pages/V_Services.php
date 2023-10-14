@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline services-head text-center">
-              <h2>Our Services</h2>
+              <h2>Our Program</h2>
             </div>
           </div>
         </div>
@@ -17,9 +17,11 @@
                   <a class="services-icon" href="#">
                     <i class="bi bi-briefcase"></i>
                   </a>
-                  <h4>Expert Coder</h4>
+                  <h4>BKK</h4>
                   <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  Informasi JobFair SMK PK YAJ Depok
+                  BKS SMK PK YAJ Depok bekerja sama dengan beberapa Perusahaan sedang mencari dan akan merekrut kandidat lulusan terbaik SMA, SMK, D3, S1. Terbuka untuk umum dan Free
+                  PENDAFTARAN PESERTA JOB FAIR SMK PK YAJ Depok 2023
                   </p>
                 </div>
               </div>
@@ -33,10 +35,20 @@
                   <a class="services-icon" href="#">
                     <i class="bi bi-card-checklist"></i>
                   </a>
-                  <h4>Creative Designer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+                  <h4>Pembiasaan Pagi</h4>
+                  <ul>
+                  <li>
+                    <i class="bi bi-check"></i>Upacara Bendera hari senin yang akan di laksanakan dilapangan SMK YAJ
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> senam dan jalan santai di lingkungan SMK YAJ
+                  <li>
+                    <i class="bi bi-check"></i> Penanaman budi pekerti melalui sholat Dhuha di SMK YAJ
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> mengaji bersama
+                  </li>
+                </ul>              
                 </div>
               </div>
               <!-- end about-details -->

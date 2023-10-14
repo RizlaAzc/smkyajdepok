@@ -26,12 +26,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/user/img/portfolio/1.jpg" alt="" /></a>
+                <a href="#"><img src="assets/user/img/portfolio/duha.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/1.jpg">
-                      <h4>Business City</h4>
-                      <span>Web Development</span>
+                      <h4>Shalat Duha</h4>
+                      <span></span>
                     </a>
                   </div>
                 </div>
@@ -44,12 +44,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/user/img/portfolio/2.jpg" alt="" /></a>
+                <a href="#"><img src="assets/user/img/portfolio/senam.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/2.jpg">
-                      <h4>Blue Sea</h4>
-                      <span>Photosho</span>
+                      <h4>Senam Pagi</h4>
+                      <span></span>
                     </a>
                   </div>
                 </div>
@@ -62,12 +62,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/user/img/portfolio/3.jpg" alt="" /></a>
+                <a href="#"><img src="assets/user/img/portfolio/upacara.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/3.jpg">
-                      <h4>Beautiful Nature</h4>
-                      <span>Web Design</span>
+                      <h4>Upacara Bendera </h4>
+                      <span></span>
                     </a>
                   </div>
                 </div>
@@ -80,11 +80,11 @@
           <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/user/img/portfolio/4.jpg" alt="" /></a>
+                <a href="#"><img src="assets/user/img/portfolio/lkkpd.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/4.jpg">
-                      <h4>Creative Team</h4>
+                      <h4>lkkpd</h4>
                       <span>Web design</span>
                     </a>
                   </div>
@@ -98,11 +98,11 @@
           <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/user/img/portfolio/5.jpg" alt="" /></a>
+                <a href="#"><img src="assets/user/img/portfolio/santai.jpeg" alt="" /></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
                     <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/5.jpg">
-                      <h4>Beautiful Flower</h4>
+                      <h4>jalan santai</h4>
                       <span>Web Development</span>
                     </a>
                   </div>

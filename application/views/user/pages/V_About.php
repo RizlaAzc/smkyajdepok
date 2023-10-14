@@ -14,7 +14,7 @@
             <div class="well-left">
               <div class="single-well">
                 <a href="#">
-                  <img src="assets/user/img/about/1.jpg" alt="">
+                  <img src="assets/user/img/smk.png" alt="">
                 </a>
               </div>
             </div>
@@ -24,27 +24,30 @@
             <div class="well-middle">
               <div class="single-well">
                 <a href="#">
-                  <h4 class="sec-head">project Maintenance</h4>
+                <div class="footer-contacts">
+                  <p><span> SMK YAJ</span></p>
+                  
+                </div>
                 </a>
                 <p>
-                  Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                Sekolah YAJ adalah Sekolah berbasis religius serta Sekolah berbasis Informasi Teknologi. Gedung sekolah tidak terintegrasi dengan satuan pendidikan yang lain. 
+                Memiliki ciri khas seragam harian yang berbeda, unik dan menarik. Sistem pembinaan peserta didik yang terintegrasi dengan prestasi.
+                 Ruang Belajar dan peralatan praktek yang lengkap.
                 </p>
+                <p> jurusan yang ada di SMK YAJ antara lain :</p>
                 <ul>
                   <li>
-                    <i class="bi bi-check"></i> Interior design Package
+                    <i class="bi bi-check"></i> REKAYASA PERANGKAT LUNAK
                   </li>
                   <li>
-                    <i class="bi bi-check"></i> Building House
+                    <i class="bi bi-check"></i> TEKNOLOGI KOMPUTER JARINGAN
+                  <li>
+                    <i class="bi bi-check"></i> PERKANTORAN
                   </li>
                   <li>
-                    <i class="bi bi-check"></i> Reparing of Residentail Roof
+                    <i class="bi bi-check"></i> AKUNTANSI
                   </li>
-                  <li>
-                    <i class="bi bi-check"></i> Renovaion of Commercial Office
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i> Make Quality Products
-                  </li>
+                  
                 </ul>
               </div>
             </div>
