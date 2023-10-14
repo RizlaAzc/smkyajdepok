@@ -35,7 +35,7 @@
               <div class="testimonial-item">
                 <img src="assets/user/img/testimonials/palukman.jpg" class="testimonial-img" alt="">
                 <h3>Lukmanul Hakim, S.Kom</h3>
-                <h4>Designer</h4>
+                <h4>Hubin</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   To achieve success is not just by imagining and daydreaming, but can be achieved by persistent learning, hard work and getting the blessings and prayers from teachers and parents.                 
