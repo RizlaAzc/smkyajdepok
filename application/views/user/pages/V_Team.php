@@ -18,7 +18,7 @@
                 <div class="team-social-icon text-center">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/smk.y.depok">
                         <i class="bi bi-facebook"></i>
                       </a>
                     </li>
@@ -28,7 +28,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/smk_yaj/">
                         <i class="bi bi-instagram"></i>
                       </a>
                     </li>
@@ -61,7 +61,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/kangyuza/">
                         <i class="bi bi-instagram"></i>
                       </a>
                     </li>
@@ -84,7 +84,7 @@
                 <div class="team-social-icon text-center">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/irkham.kardiyanto">
                         <i class="bi bi-facebook"></i>
                       </a>
                     </li>
@@ -94,7 +94,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/irkhamkrdynto/">
                         <i class="bi bi-instagram"></i>
                       </a>
                     </li>
@@ -117,7 +117,7 @@
                 <div class="team-social-icon text-center">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/nhamoetz0515">
                         <i class="bi bi-facebook"></i>
                       </a>
                     </li>
@@ -127,7 +127,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/mirna_meilani/">
                         <i class="bi bi-instagram"></i>
                       </a>
                     </li>
