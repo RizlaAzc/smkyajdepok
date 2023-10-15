@@ -31,7 +31,7 @@ class home extends CI_Controller {
 		$this->load->view('user/pages/V_Portfolio');
 		$this->load->view('user/pages/V_Pricing');
 		$this->load->view('user/pages/V_Testimonials');
-		// $this->load->view('user/pages/V_Blog');
+		$this->load->view('user/pages/V_Blog');
 		$this->load->view('user/pages/V_Suscribe');
 		$this->load->view('user/pages/V_Contact');
 		$this->load->view('user/templates/V_Footer');
