@@ -20,11 +20,20 @@ class dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
+		if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
+            redirect('admin/auth');
+        }
+
+		$year['year'] = date('Y');
+
+		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "Dashboard - CMS";
+
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar');
 		$this->load->view('admin/pages/V_Dashboard');
-		$this->load->view('admin/templates/pages/V_Footer');
+		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 }

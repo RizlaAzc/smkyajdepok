@@ -93,6 +93,11 @@ class auth extends CI_Controller {
 
 	public function register()
 	{
+		if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
+            redirect('admin/auth');
+        }
+		
 		$this->form_validation->set_rules('nama', 'nama', 'required|trim');
 		$this->form_validation->set_rules('email', 'email', 'required|trim|valid_email|is_unique[login.email]', [
 			'is_unique' => 'this email has already registered!'
@@ -119,22 +124,24 @@ class auth extends CI_Controller {
 			// $role_id = $this->input->post('role_id');
 
 			$data = [
+				'nama_lengkap' => htmlspecialchars($this->input->post('nama_lengkap', true)),
 				'nama' => htmlspecialchars($this->input->post('nama', true)),
 				'email' => htmlspecialchars($this->input->post('email', true)),
-				'foto' => 'profil.png',
 				'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+				'telepon' => htmlspecialchars($this->input->post('telepon', true)),
+				'foto' => 'profil.png',
 				// 'role_id' => $role_id,
-				'is_active' => 1,
-				'date_created' => date('Y-m-d H:i:s')
+				'date_created' => date('Y-m-d'),
+				'is_active' => 1
 			];
 
 			$this->db->insert('login', $data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">congratulation! your account has been created. please login!</div>');
-			redirect('admin/auth');
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! Your account has been created!</div>');
+			redirect('admin/dashboard');
 		}
 	}
 
-	public function logout()
+	public function logout()	
 	{
 		// $this->session->unset_unserdata('email');
 		// $this->session->unset_unserdata('role_id');

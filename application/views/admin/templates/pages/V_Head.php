@@ -13,7 +13,7 @@
 
     <!-- Favicons -->
     <link href="<?= base_url('assets/admin/');?>img/smk.png" rel="icon">
-    <!-- <link href="<?= base_url('assets/admin/');?>img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <link href="<?= base_url('assets/admin/');?>img/smk.png" rel="apple-touch-icon">
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/admin/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
