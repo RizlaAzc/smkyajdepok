@@ -50,14 +50,14 @@
           <div class="col-md-4">
             <div class="footer-content">
               <div class="footer-head">
-                <h4>Instagram</h4>
+                <h4>Gallery</h4>
                 <div class="flicker-img">
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/smk.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/santai.jpeg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/ykk.jpeg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/3.jpg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/4.jpg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/5.jpg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/6.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/wisuda.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/rps.jpeg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/duha.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/senam.jpg" alt=""></a>
                 </div>
               </div>
             </div>

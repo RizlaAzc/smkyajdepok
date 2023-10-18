@@ -22,7 +22,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">VISI</h2>
                 <p class="animate__animated animate__fadeInUp">Making SMK YAJ a vocational high school that produces skilled, superior, independent and religious students</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
+                <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">MOTTO</h2>
                 <p class="animate__animated animate__fadeInUp">We come to study and follow the rules</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
+                <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>

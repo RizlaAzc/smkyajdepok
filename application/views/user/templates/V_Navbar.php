@@ -13,14 +13,13 @@
 <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">PPDB</a></li>
-          <li><a class="nav-link scrollto" href="#services">Form Alumni</a></li>
-          <li><a class="nav-link scrollto" href="#services">Direktori</a></li>
-          <li><a class="nav-link scrollto" href="#services">Download</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Agenda</a></li>
-          <li><a class="nav-link scrollto" href="#team">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Peta Situs</a></li>
-          <li><a href="<?= base_url('blog');?>">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="">PPDB</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>         
+          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#">Informasi</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#team">Peta Situs</a></li> -->
+          <!-- <li><a href="<?= base_url('blog');?>">Blog</a></li> -->
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
