@@ -61,8 +61,8 @@
             <!-- Start  contact -->
             <div class="col-md-6">
               <div class="form contact-form">
-                <form action="<?= base_url('contact/fungsi_tambah') ?>" method="post" role="form" class="php-email-form">
-                <?= $this->session->flashdata('pesan'); ?>
+                <form action="<?= base_url('contact/fungsi_tambah') ?>" method="post" role="form" >
+                      <?= $this->session->flashdata('pesan'); ?>
                   <div class="form-group">
                     <input type="text" name="nama" class="form-control" id="name" placeholder="Your Name" required>
                   </div>
@@ -77,8 +77,8 @@
                   </div>
                   <div class="my-3">
                     <!-- <div class="loading">Loading</div> -->
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <!-- <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> -->
                   </div>
                   <div class="text-center"><button type="submit" class="btn btn-success">Send Message</button></div>
                 </form>

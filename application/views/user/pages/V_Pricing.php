@@ -8,7 +8,7 @@
             </div>
           </div>
         </div> -->
-        <div class="row">
+        <div class="row">                                                                           
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="pri_table_list">
               <h3>Sekilas Info <br /> <span></span></h3>

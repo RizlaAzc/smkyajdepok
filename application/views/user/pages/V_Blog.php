@@ -16,7 +16,7 @@
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog.html">
-                    <img src="assets/img/blog/1.jpg" alt="">
+                    <img src="assets/img/blog/1.jpg" alt="">  
                   </a>
                 </div>
                 <!-- <div class="blog-meta">

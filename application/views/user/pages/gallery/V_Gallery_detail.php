@@ -75,10 +75,8 @@
             </div>
           </div>
           <!-- portfolio-item end -->
-
-         
-
-         
+          
         </div>
       </div>
     </div><!-- End Portfolio Section -->
+   

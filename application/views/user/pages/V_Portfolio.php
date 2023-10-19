@@ -132,4 +132,6 @@
 
         </div>
       </div>
-    </div><!-- End Portfolio Section -->
+    </div>
+    <a class="sus-btn" href="<?= base_url('gallery');?>">gallery detail</a>
+    <!-- End Portfolio Section -->

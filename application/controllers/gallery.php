@@ -9,7 +9,7 @@ class gallery extends CI_Controller {
         $title['title'] = " Gallery SMK YAJ Depok";
         $this->load->view('user/templates/V_Head', $title);
 		$this->load->view('user/templates/V_Navbar');
-        $this->load->view('user/pages/V_gallery');
+        $this->load->view('user/pages/gallery/V_Gallery_detail');
 		$this->load->view('user/templates/V_Footer');
 	}
 }
