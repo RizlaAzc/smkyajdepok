@@ -53,7 +53,7 @@
                         <p>Pilihan I</p>
                     </div>
                     <div class="col-sm-9">
-                        <select name="jalurpendaftaran" class="form-control" id="jalurpendaftaran"  required>
+                        <select name="pilihan1" class="form-control" id="jalurpendaftaran"  required>
                         <option value="" disabled selected> </option>
                         <option value="1">Teknik Jaringan Komputer dan Telekomunikasi</option>
                         <option value="2">Pengembangan Perangkat Lunak dan Gim</option>
@@ -70,7 +70,7 @@
                         <p>Pilihan II</p>
                     </div>
                     <div class="col-sm-9">
-                        <select name="jalurpendaftaran" class="form-control" id="jalurpendaftaran"  required>
+                        <select name="Pilihan2" class="form-control" id="jalurpendaftaran"  required>
                         <option value="" disabled selected> </option>
                         <option value="1">Teknik Jaringan Komputer dan Telekomunikasi</option>
                         <option value="2">Pengembangan Perangkat Lunak dan Gim</option>
@@ -255,7 +255,7 @@
                         <p>Photo</p>
                     </div>
                     <div class="col-sm-9">
-                    <input type="file" class="form-control" name="file" id="file" required>
+                    <input type="file" class="form-control" name="photo" id="file" required>
                         <div class="block-error" style="color:#333;">Tipe file harus JPG dan ukuran maksimal photo 1 MB</div>
                     </div>
                     </div>
