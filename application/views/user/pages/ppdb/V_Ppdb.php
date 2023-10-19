@@ -227,7 +227,7 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="row">
                     <div class="col-sm-3 mt-2">
                         <p>TK Asal</p>
@@ -236,7 +236,7 @@
                     <input type="text" class="form-control" name="tkasal" id="tkasal" placeholder=" " required>
                     </div>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div class="form-group">
                     <div class="row">
