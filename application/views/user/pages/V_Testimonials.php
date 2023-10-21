@@ -48,7 +48,7 @@
               <div class="testimonial-item">
                 <img src="assets/user/img/testimonials/budea.jpg" class="testimonial-img" alt="">
                 <h3>Dea Anggi Rahmawati, A.Md.MI</h3>
-                <h4>Freelancer</h4>
+                <h4>KAPROG</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   Don't think too much about other people's expectations of you. Just be yourself, that's better.
