@@ -31,7 +31,7 @@
           <div class="col-md-6">
               <div class="form contact-form">
               <h4 class="text-muted my-3">Data Pendaftaran</h4>
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <?= form_open_multipart('ppdb/ppdb'); ?>
 
                   <div class="form-group">
                     <div class="row">
@@ -393,7 +393,6 @@
 
 
                     <div class="text-center"><br><button class="btn btn-primary" type="submit">Simpan Formulir Pendaftaran</button></div>
-                </form>
               </div>
             </div>
             <!-- End Left contact -->
