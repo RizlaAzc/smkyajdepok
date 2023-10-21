@@ -28,7 +28,6 @@ class ppdb extends CI_Controller {
 	public function index()
 	{
 		$data['study'] = $this->model_study->getDataStudy();
-		
 		$title['title'] = " PPDB SMK YAJ";
 		$this->load->view('user/templates/V_Head', $title);
 		$this->load->view('user/templates/V_Navbar');
