@@ -3,6 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class profile extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
+            redirect('admin/auth');
+        }
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,11 +29,6 @@ class profile extends CI_Controller {
 	 */
 	public function index()
 	{
-        if (!$this->session->userdata('email')) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
-            redirect('admin/auth');
-        }
-        
 		$year['year'] = date('Y');
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
@@ -39,11 +43,6 @@ class profile extends CI_Controller {
 
 	public function edit_profile()
 	{
-        if (!$this->session->userdata('email')) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
-            redirect('admin/auth');
-        }
-
 		$year['year'] = date('Y');
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();

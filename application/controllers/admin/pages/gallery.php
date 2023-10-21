@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class carousel extends CI_Controller {
+class gallery extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_carousel');
+        $this->load->model('model_gallery');
 
         if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
@@ -34,14 +34,14 @@ class carousel extends CI_Controller {
 		$year['year'] = date('Y');
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-		$title['title'] = "Carousel - CMS";
+		$title['title'] = "Gallery - CMS";
 
-        $data['carousel'] = $this->model_carousel->getDataCarousel();
+        $data['gallery'] = $this->model_gallery->getDataGallery();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar');
-		$this->load->view('admin/pages/carousel/V_Carousel', $data);
+		$this->load->view('admin/pages/gallery/V_Gallery', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 
@@ -76,7 +76,7 @@ class carousel extends CI_Controller {
 
         if ($gambar = '') {
         } else {
-            $config['upload_path'] = 'assets/admin/img/pages/carousel';
+            $config['upload_path'] = 'assets/admin/img/pages/gallery';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload');
@@ -94,8 +94,8 @@ class carousel extends CI_Controller {
             'gambar' => $gambar
         );
 
-        $this->model_carousel->insertDataCarousel($ArrInsert);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Carousel added successfully!</div>');
+        $this->model_gallery->insertDataGallery($ArrInsert);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Gallery added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 
@@ -145,8 +145,8 @@ class carousel extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->model_carousel->hapusDataCarousel($id);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Carousel has been successfully deleted!</div>');
+        $this->model_gallery->hapusDataGallery($id);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Gallery has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 }

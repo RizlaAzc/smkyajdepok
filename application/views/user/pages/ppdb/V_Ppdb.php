@@ -41,7 +41,7 @@
                     <div class="col-sm-9">
                         <select name="jalurpendaftaran" class="form-control" id="jalurpendaftaran"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Online</option>
+                        <option value="Online">Online</option>
                         </select>
                     </div>
                     </div>
@@ -55,10 +55,13 @@
                     <div class="col-sm-9">
                         <select name="pilihan1" class="form-control" id="jalurpendaftaran"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Teknik Jaringan Komputer dan Telekomunikasi</option>
-                        <option value="2">Pengembangan Perangkat Lunak dan Gim</option>
-                        <option value="3">Akuntansi Keuangan Lembaga</option>
-                        <option value="4">Manajemen Perkantoran Lembaga Binis</option>
+                        <?php
+                        foreach($study as $study1){
+                        ?>
+                        <option value="<?= $study1->jurusan ?>"><?= $study1->jurusan ?></option>
+                        <?php
+                        }
+                        ?>
                         </select>
                     </div>
                     </div>
@@ -70,12 +73,15 @@
                         <p>Pilihan II</p>
                     </div>
                     <div class="col-sm-9">
-                        <select name="Pilihan2" class="form-control" id="jalurpendaftaran"  required>
+                        <select name="pilihan2" class="form-control" id="jalurpendaftaran"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Teknik Jaringan Komputer dan Telekomunikasi</option>
-                        <option value="2">Pengembangan Perangkat Lunak dan Gim</option>
-                        <option value="3">Akuntansi Keuangan Lembaga</option>
-                        <option value="4">Manajemen Perkantoran Lembaga Binis</option>
+                        <?php
+                        foreach($study as $study2){
+                        ?>
+                        <option value="<?= $study2->jurusan ?>"><?= $study2->jurusan ?></option>
+                        <?php
+                        }
+                        ?>
                         </select>
                     </div>
                     </div>
@@ -153,8 +159,8 @@
                     <div class="col-sm-9">
                         <select name="jeniskelamin" class="form-control" id="jeniskelamin"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Laki - Laki</option>
-                        <option value="2">Perempuan</option>
+                        <option value="Laki - Laki">Laki - Laki</option>
+                        <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
                     </div>
@@ -168,12 +174,12 @@
                     <div class="col-sm-9">
                         <select name="agama" class="form-control" id="agama"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Islam</option>
-                        <option value="2">Kristen</option>
+                        <option value="Islam">Islam</option>
+                        <!-- <option value="2">Kristen</option>
                         <option value="3">Katholik</option>
                         <option value="4">Hindu</option>
                         <option value="5">Budha</option>
-                        <option value="6">Konghucu</option>
+                        <option value="6">Konghucu</option> -->
                         </select>
                     </div>
                     </div>
@@ -187,8 +193,8 @@
                     <div class="col-sm-9">
                         <select name="statusanak" class="form-control" id="statusanak"  required>
                         <option value="" disabled selected> </option>
-                        <option value="1">Anak Kandung</option>
-                        <option value="2">Anak Angkat</option>
+                        <option value="Anak Kandung">Anak Kandung</option>
+                        <option value="Anak Angkat">Anak Angkat</option>
                         </select>
                     </div>
                     </div>
@@ -296,7 +302,7 @@
                         <p>Alamat Orang Tua</p>
                     </div>
                     <div class="col-sm-9">
-                    <textarea class="form-control" name="alamatortu " rows="4" placeholder=" " required></textarea>
+                    <textarea class="form-control" name="alamatortu" rows="4" placeholder=" " required></textarea>
                     </div>
                     </div>
                   </div>
@@ -344,7 +350,7 @@
                         <p>Nama wali</p>
                     </div>
                     <div class="col-sm-9">
-                    <input type="text" class="form-control" name="namawali" id="namawali" placeholder=" " required>
+                    <input type="text" class="form-control" name="namawali" id="namawali" placeholder=" ">
                     </div>
                     </div>
                   </div>
@@ -355,7 +361,7 @@
                         <p>Alamat Wali</p>
                     </div>
                     <div class="col-sm-9">
-                    <textarea class="form-control" name="alamatwali " rows="4" placeholder=" " required></textarea>
+                    <textarea class="form-control" name="alamatwali" rows="4" placeholder=" "></textarea>
                     </div>
                     </div>
                   </div>
@@ -366,7 +372,7 @@
                         <p>Telephone Wali</p>
                     </div>
                     <div class="col-sm-9">
-                    <input type="text" class="form-control" name="telephonewali" id="telephonewali" placeholder=" " required>
+                    <input type="text" class="form-control" name="telephonewali" id="telephonewali" placeholder=" ">
                     </div>
                     </div>
                   </div>
@@ -377,7 +383,7 @@
                         <p>Pekerjaan Wali</p>
                         </div>
                         <div class="col-sm-9">
-                        <input type="text" class="form-control" name="pekerjaanwali" id="pekerjaanwali" placeholder=" " required>
+                        <input type="text" class="form-control" name="pekerjaanwali" id="pekerjaanwali" placeholder=" ">
                         </div>
                     </div>
                   </div>

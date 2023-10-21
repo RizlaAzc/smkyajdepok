@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ppdb extends CI_Controller {
 
+	public function __construct()
+	{
+		parent:: __construct();
+		$this->load->model('model_study');
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,9 +26,11 @@ class ppdb extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['study'] = $this->model_study->getDataStudy();
+
 		$this->load->view('user/templates/V_Head');
 		$this->load->view('user/templates/V_Navbar');
-		$this->load->view('user/pages/ppdb/V_Ppdb');
+		$this->load->view('user/pages/ppdb/V_Ppdb', $data);
 		$this->load->view('user/templates/V_Footer');
 	}
 

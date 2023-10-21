@@ -3,13 +3,13 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Carousel</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Gallery</h1>
                         
                         <ol class="breadcrumb mb-0">
                             <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">User</a></li> -->
                             <li class="breadcrumb-item active" aria-current="page">Pages</li>
-                            <li class="breadcrumb-item active" aria-current="page">Carousel</li>
+                            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                         </ol>
                     </div>
 
@@ -18,8 +18,8 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="d-sm-flex align-items-center justify-content-between card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Carousel Tables</h6>
-                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Carousel</button>
+                            <h6 class="m-0 font-weight-bold text-primary">Gallery Tables</h6>
+                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Gallery</button>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -45,14 +45,14 @@
                                     <tbody>
                                         <?php
                                         $no = 1;
-                                        foreach($carousel as $carousel){
+                                        foreach($gallery as $gallery){
                                         ?>
                                         <tr>
                                             <td class="text-center" style="vertical-align: middle;"><?= $no++ ?></td>
-                                            <td style="vertical-align: middle;"><?= $carousel->subjek ?></td>
-                                            <td style="vertical-align: middle;"><?= $carousel->deskripsi ?></td>
-                                            <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/carousel/') ?><?= $carousel->gambar ?>" width="75"></td>
-                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/carousel/fungsi_hapus/') . $carousel->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
+                                            <td style="vertical-align: middle;"><?= $gallery->subjek ?></td>
+                                            <td style="vertical-align: middle;"><?= $gallery->deskripsi ?></td>
+                                            <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/gallery/') ?><?= $gallery->gambar ?>" width="75"></td>
+                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/gallery/fungsi_hapus/') . $gallery->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
                                              shadow-sm ml-1"><i class="fas fa-trash fa-sm text-white-50"></i></a></td>
                                         </tr>
                                         <?php
@@ -76,13 +76,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Carousel Form</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Gallery Form</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?= form_open_multipart('admin/pages/carousel/fungsi_tambah'); ?>
+                    <?= form_open_multipart('admin/pages/gallery/fungsi_tambah'); ?>
                     <div class="form-group">
                         <label for="inputAddress" class="form-label">Subject</label>
                         <input type="text" class="form-control" id="inputAddress" name="subjek" required>

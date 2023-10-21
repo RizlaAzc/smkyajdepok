@@ -85,10 +85,17 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Front Page:</h6>
+                        <h6 class="collapse-header">Carousel:</h6>
                         <a class="collapse-item" href="<?= base_url('admin/pages/carousel') ?>">Carousel</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
+                        <h6 class="collapse-header">About:</h6>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/about/about') ?>">About</a>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/about/study') ?>">Study</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Team:</h6>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/about/study') ?>">Team</a>
+                        <h6 class="collapse-header">Gallery:</h6>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/gallery') ?>">Gallery</a>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
