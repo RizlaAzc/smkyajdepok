@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2023 at 10:34 AM
+-- Generation Time: Oct 21, 2023 at 04:15 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -38,7 +38,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
-(1, 'tes1', 'tes1', 'profil1.png');
+(1, 'SMK YAJ', 'Sekolah YAJ adalah Sekolah berbasis religius serta Sekolah berbasis Informasi Teknologi. Gedung sekolah tidak terintegrasi dengan satuan pendidikan yang lain. Memiliki ciri khas seragam harian yang berbeda, unik dan menarik. Sistem pembinaan peserta didik yang terintegrasi dengan prestasi. Ruang Belajar dan peralatan praktek yang lengkap.  jurusan yang ada di SMK YAJ antara lain :   REKAYASA PERANGKAT LUNAK  TEKNOLOGI KOMPUTER JARINGAN  PERKANTORAN  AKUNTANSI', 'smk.png');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,6 @@ CREATE TABLE `carousel` (
 --
 
 INSERT INTO `carousel` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
-(4, 'hehe', 'hehe', 'profil.png'),
 (7, 'SMK YAJ DEPOK', 'WELCOME TO OUR WEBSITE', 'smk2.jpg'),
 (8, 'VISI', 'Making SMK YAJ a vocational high school that produces skilled, superior, independent and religious students', 'ykk2.jpeg'),
 (9, 'MISI', 'We come to study and follow the rules', 'yaj1.jpeg');
@@ -81,7 +80,7 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
-(2, 'tess', 'tesss', 'WIN_20230529_10_00_18_Pro.jpg');
+(3, 'SHALAT DUHA', 'SHALAT DUHA', 'duha.jpg');
 
 -- --------------------------------------------------------
 
@@ -178,7 +177,11 @@ CREATE TABLE `quotes` (
 --
 
 INSERT INTO `quotes` (`id`, `nama`, `jabatan`, `quotes`, `gambar`) VALUES
-(1, 'asd', 'jjj', 'jaga', 'profil1.png');
+(2, 'Albert Einstein', 'physicist', 'Anyone who has never made a mistake has never trie', 'albert.jpeg'),
+(3, 'Idham Kholid, S.Ag, S.E.', 'School principal', 'Don\'t be too busy looking for the perfect one if a', 'pakidham.jpg'),
+(4, 'Lukmanul Hakim, S.Kom<', 'Hubin', 'To achieve success is not just by imagining and da', 'palukman.jpg'),
+(5, 'Dea Anggi Rahmawati, A.Md.MI', 'KAPROG', 'Don\'t think too much about other people\'s expectat', 'budea.jpg'),
+(6, 'Martin Luther King', 'social activist', 'Intelligence coupled with character is the goal of', 'Martin.jpeg');
 
 -- --------------------------------------------------------
 
@@ -226,6 +229,16 @@ CREATE TABLE `team` (
   `nama` varchar(50) NOT NULL,
   `jabatan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `team`
+--
+
+INSERT INTO `team` (`id`, `gambar`, `nama`, `jabatan`) VALUES
+(3, 'paidham.jpg', 'Idham Kholid ', 'School principal'),
+(4, 'kangyusuf.jpg', 'Yusuf Zamzami ', 'Student Affairs'),
+(5, 'kangir.jpg', 'Irkham Kardianto ', 'student council advisor'),
+(6, 'bumirna.jpg', 'Mirna Meylani ', 'curriculum leader');
 
 --
 -- Indexes for dumped tables
@@ -309,7 +322,7 @@ ALTER TABLE `carousel`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `login`
 --
@@ -324,7 +337,7 @@ ALTER TABLE `pesan`
 -- AUTO_INCREMENT for table `quotes`
 --
 ALTER TABLE `quotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `sosial_media`
 --
@@ -339,7 +352,7 @@ ALTER TABLE `study`
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
