@@ -93,9 +93,10 @@
                         <a class="collapse-item" href="<?= base_url('admin/pages/about/study') ?>">Study</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Team:</h6>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/about/study') ?>">Team</a>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/team') ?>">Team</a>
                         <h6 class="collapse-header">Gallery:</h6>
                         <a class="collapse-item" href="<?= base_url('admin/pages/gallery') ?>">Gallery</a>
+                        <a class="collapse-item" href="<?= base_url('admin/pages/quotes') ?>">Quotes</a>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>

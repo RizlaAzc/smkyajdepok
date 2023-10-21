@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2023 at 08:03 AM
+-- Generation Time: Oct 21, 2023 at 10:24 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -160,6 +160,27 @@ CREATE TABLE `ppdb` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `quotes`
+--
+
+CREATE TABLE `quotes` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `jabatan` varchar(50) NOT NULL,
+  `quotes` varchar(50) NOT NULL,
+  `gambar` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `quotes`
+--
+
+INSERT INTO `quotes` (`id`, `nama`, `jabatan`, `quotes`, `gambar`) VALUES
+(1, 'asd', 'jjj', 'jaga', 'profil1.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sosial_media`
 --
 
@@ -190,6 +211,19 @@ INSERT INTO `study` (`id`, `jurusan`) VALUES
 (3, 'Pengembangan Perangkat Lunak dan Gim'),
 (4, 'Akuntansi dan Keuangan Lembaga'),
 (5, 'Manajemen Perkantoran dan Layanan Bisnis');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team`
+--
+
+CREATE TABLE `team` (
+  `id` int(11) NOT NULL,
+  `gambar` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `jabatan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -232,6 +266,12 @@ ALTER TABLE `ppdb`
   ADD PRIMARY KEY (`nisn`);
 
 --
+-- Indexes for table `quotes`
+--
+ALTER TABLE `quotes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sosial_media`
 --
 ALTER TABLE `sosial_media`
@@ -241,6 +281,12 @@ ALTER TABLE `sosial_media`
 -- Indexes for table `study`
 --
 ALTER TABLE `study`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `team`
+--
+ALTER TABLE `team`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -278,6 +324,12 @@ ALTER TABLE `pesan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `quotes`
+--
+ALTER TABLE `quotes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `sosial_media`
 --
 ALTER TABLE `sosial_media`
@@ -288,6 +340,12 @@ ALTER TABLE `sosial_media`
 --
 ALTER TABLE `study`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `team`
+--
+ALTER TABLE `team`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -15,7 +15,7 @@
                 <a href="#">
                   <img src="assets/user/img/team/paidham.jpg" alt="">
                 </a>
-                <div class="team-social-icon text-center">
+                <!-- <div class="team-social-icon text-center">
                   <ul>
                     <li>
                       <a href="https://www.facebook.com/smk.y.depok">
@@ -33,7 +33,7 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <div class="team-content text-center">
                 <h4>Idham Kholid</h4>
@@ -48,7 +48,7 @@
                 <a href="#">
                   <img src="assets/user/img/team/kangyusuf.jpg" alt="">
                 </a>
-                <div class="team-social-icon text-center">
+                <!-- <div class="team-social-icon text-center">
                   <ul>
                     <li>
                       <a href="#">
@@ -66,7 +66,7 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <div class="team-content text-center">
                 <h4>Yusuf Zamzami</h4>
@@ -81,7 +81,7 @@
                 <a href="#">
                   <img src="assets/user/img/team/kangir.jpg" alt="">
                 </a>
-                <div class="team-social-icon text-center">
+                <!-- <div class="team-social-icon text-center">
                   <ul>
                     <li>
                       <a href="https://www.facebook.com/irkham.kardiyanto">
@@ -99,7 +99,7 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <div class="team-content text-center">
                 <h4>Irkham Kardianto</h4>
@@ -114,25 +114,7 @@
                 <a href="#">
                   <img src="assets/user/img/team/bumirna.jpg" alt="">
                 </a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="https://www.facebook.com/nhamoetz0515">
-                        <i class="bi bi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="bi bi-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/mirna_meilani/">
-                        <i class="bi bi-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+               
               </div>
               <div class="team-content text-center">
                 <h4>Mirna Meylani</h4>
