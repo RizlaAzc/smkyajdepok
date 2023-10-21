@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2023 at 08:22 AM
+-- Generation Time: Oct 21, 2023 at 08:03 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(11) NOT NULL,
+  `subjek` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `gambar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
+(1, 'tes1', 'tes1', 'profil1.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `carousel`
 --
 
@@ -39,10 +59,27 @@ CREATE TABLE `carousel` (
 --
 
 INSERT INTO `carousel` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
-(1, 'tes', 'tes', ''),
-(2, 'asdasd', 'asdasd', ''),
-(3, 'aisjd', 'oljasd', ''),
 (4, 'hehe', 'hehe', 'profil.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `subjek` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `gambar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `subjek`, `deskripsi`, `gambar`) VALUES
+(2, 'tess', 'tesss', 'WIN_20230529_10_00_18_Pro.jpg');
 
 -- --------------------------------------------------------
 
@@ -88,6 +125,41 @@ CREATE TABLE `pesan` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ppdb`
+--
+
+CREATE TABLE `ppdb` (
+  `nisn` int(11) NOT NULL,
+  `namalengkap` varchar(255) NOT NULL,
+  `tempatlahir` varchar(255) NOT NULL,
+  `tanggallahir` date NOT NULL,
+  `jeniskelamin` varchar(255) NOT NULL,
+  `agama` varchar(255) NOT NULL,
+  `statusanak` varchar(255) NOT NULL,
+  `anakke` varchar(255) NOT NULL,
+  `alamat` text NOT NULL,
+  `telephone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `namaayah` varchar(255) NOT NULL,
+  `namaibu` varchar(255) NOT NULL,
+  `alamatortu` text NOT NULL,
+  `telephoneortu` varchar(255) NOT NULL,
+  `pekerjaanayah` varchar(255) NOT NULL,
+  `pekerjaanibu` varchar(255) NOT NULL,
+  `namawali` varchar(255) NOT NULL,
+  `alamatwali` text NOT NULL,
+  `telephonewali` varchar(255) NOT NULL,
+  `pekerjaanwali` varchar(255) NOT NULL,
+  `jalurpendaftaran` varchar(255) NOT NULL,
+  `pilihan1` varchar(255) NOT NULL,
+  `pilihan2` varchar(255) NOT NULL,
+  `asalsekolah` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sosial_media`
 --
 
@@ -98,14 +170,47 @@ CREATE TABLE `sosial_media` (
   `logo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `study`
+--
+
+CREATE TABLE `study` (
+  `id` int(11) NOT NULL,
+  `jurusan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `study`
+--
+
+INSERT INTO `study` (`id`, `jurusan`) VALUES
+(2, 'Teknik Jaringan Komputer dan Telekomunikasi'),
+(3, 'Pengembangan Perangkat Lunak dan Gim'),
+(4, 'Akuntansi dan Keuangan Lembaga'),
+(5, 'Manajemen Perkantoran dan Layanan Bisnis');
+
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `carousel`
 --
 ALTER TABLE `carousel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -121,9 +226,21 @@ ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ppdb`
+--
+ALTER TABLE `ppdb`
+  ADD PRIMARY KEY (`nisn`);
+
+--
 -- Indexes for table `sosial_media`
 --
 ALTER TABLE `sosial_media`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `study`
+--
+ALTER TABLE `study`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -131,10 +248,22 @@ ALTER TABLE `sosial_media`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -153,6 +282,12 @@ ALTER TABLE `pesan`
 --
 ALTER TABLE `sosial_media`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `study`
+--
+ALTER TABLE `study`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
