@@ -10,11 +10,14 @@
         </div>
         <div class="row">
           <!-- single-well start-->
+          <?php
+        foreach($about as $about){
+        ?>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="well-left">
               <div class="single-well">
                 <a href="#">
-                  <img src="assets/user/img/smk.png" alt="">
+                  <img src="<?= base_url('assets/admin/img/pages/about/') . $about->gambar ?>" alt="">
                 </a>
               </div>
             </div>
@@ -24,16 +27,19 @@
             <div class="well-middle">
               <div class="single-well">
                 <a href="#">
+      
                 <div class="footer-contacts">
-                  <p><span> SMK YAJ</span></p>
+                  <p><span><?= $about->subjek ?></span></p>
                   
                 </div>
                 </a>
                 <p>
-                Sekolah YAJ adalah Sekolah berbasis religius serta Sekolah berbasis Informasi Teknologi. Gedung sekolah tidak terintegrasi dengan satuan pendidikan yang lain. 
-                Memiliki ciri khas seragam harian yang berbeda, unik dan menarik. Sistem pembinaan peserta didik yang terintegrasi dengan prestasi.
-                 Ruang Belajar dan peralatan praktek yang lengkap.
+                <?= $about->deskripsi ?>
                 </p>
+                <?php
+          }
+          ?>
+
                 <p> jurusan yang ada di SMK YAJ antara lain :</p>
                 <ul>
                   <li>

@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class home extends CI_Controller {
 
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('model_carousel');
+		$this->load->model('model_about');
+		$this->load->model('model_gallery');
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,11 +27,15 @@ class home extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['carousel'] = $this->model_carousel->getDataCarousel();
+		$data['about'] = $this->model_about->getDataAbout();
+		$gallery['gallery'] = $this->model_gallery->getDataGallery();
+		
 		$title['title'] = "SMK YAJ Depok";
 		$this->load->view('user/templates/V_Head', $title);
 		$this->load->view('user/templates/V_Navbar');
-		$this->load->view('user/pages/V_Home');
-		$this->load->view('user/pages/V_About');
+		$this->load->view('user/pages/V_Home', $data);
+		$this->load->view('user/pages/V_About', $data);
 		$this->load->view('user/pages/V_Services');
 		$this->load->view('user/pages/V_Team');
 		$this->load->view('user/pages/V_Reviews');

@@ -7,17 +7,23 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url(assets/user/img/background/smk.jpg)">
+        <?php
+        foreach($carousel as $carousel){
+        ?>
+          <div class="carousel-item active" style="background-image: <?= base_url("assets/admin/img/pages/carousel/") . $carousel->gambar ?>">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">SMK YAJ DEPOK</h2>
-                <p class="animate__animated animate__fadeInUp">WELCOME TO OUR WEBSITE</p>
+                <h2 class="animate__animated animate__fadeInDown"><?= $carousel->subjek ?></h2>
+                <p class="animate__animated animate__fadeInUp"><?= $carousel->deskripsi ?></p>
                 <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
           </div>
+          <?php
+          }
+          ?>
 
-          <div class="carousel-item" style="background-image: url(assets/user/img/background/ykk.jpeg)">
+          <!-- <div class="carousel-item" style="background-image: url(assets/user/img/background/ykk.jpeg)">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">VISI</h2>
@@ -35,7 +41,7 @@
                 <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
