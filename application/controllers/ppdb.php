@@ -6,8 +6,10 @@ class ppdb extends CI_Controller {
 	public function __construct()
 	{
 		parent:: __construct();
-		$this->load->model('model_study');
-		$this->load->model('model_ppdb');
+		$this->load->model('M_Study');
+		$this->load->model('M_Ppdb');
+		$this->load->model('M_Gallery');
+		date_default_timezone_set('Asia/Jakarta');
 	}
 
 	/**
@@ -27,12 +29,13 @@ class ppdb extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['study'] = $this->model_study->getDataStudy();
-		$title['title'] = " PPDB SMK YAJ";
+		$data['gallery'] = $this->M_Gallery->getDataGallery();
+		$data['study'] = $this->M_Study->getDataStudy();
+		$title['title'] = " PPDB - SMK YAJ";
 		$this->load->view('user/templates/V_Head', $title);
 		$this->load->view('user/templates/V_Navbar');
 		$this->load->view('user/pages/ppdb/V_Ppdb', $data);
-		$this->load->view('user/templates/V_Footer');
+		$this->load->view('user/templates/V_Footer', $data);
 	}
 
 	public function ppdb()
@@ -57,7 +60,7 @@ class ppdb extends CI_Controller {
         if ($photo = '') {
         } else {
             $config['upload_path'] = 'assets/user/img/ppdb';
-            $config['allowed_types'] = 'jpg';
+            $config['allowed_types'] = 'jpg|jpeg';
 
             $this->load->library('upload');
             $this->upload->initialize($config);
@@ -78,7 +81,7 @@ class ppdb extends CI_Controller {
 		$alamatwali = $this->input->post('alamatwali');
 		$telephonewali = $this->input->post('telephonewali');
 		$pekerjaanwali = $this->input->post('pekerjaanwali');
-
+		$date = date('Y-m-d H:i:s');
 
         $ArrInsert = array(
             'jalurpendaftaran' => $jalurpendaftaran,
@@ -106,12 +109,13 @@ class ppdb extends CI_Controller {
 			'namawali' => $namawali,
 			'alamatwali' => $alamatwali,
 			'telephonewali' => $telephonewali,
-			'pekerjaanwali' => $pekerjaanwali
+			'pekerjaanwali' => $pekerjaanwali,
+			'waktudaftar' => $date
             
         );
 
-        $this->model_ppdb->insertDataPpdb($ArrInsert);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Formulir Berhasil di Simpan!</div>');
+        $this->M_Ppdb->insertDataPpdb($ArrInsert);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Formulir Berhasil di Kirim!</div>');
         redirect(base_url('ppdb'));
     }
 }

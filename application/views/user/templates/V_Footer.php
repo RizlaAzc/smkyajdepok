@@ -8,23 +8,22 @@
               <div class="footer-head">
                 <div class="footer-logo">
                 <h4>sosial media</h4>
-                </div>
-
-                <p>you can visit our social media &#9889;</p>
+                <p>You can visit our social media by<br>clicking below.</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
-                      <a href="https://mobile.facebook.com/smkyajdepokofficiall?wtsid=rdr_00I3bHXieV3EunChx&_rdc=1&_rdr&refsrc=deprecated"><i class="bi bi-facebook"></i></a>
+                      <a href="https://mobile.facebook.com/smkyajdepokofficiall?wtsid=rdr_00I3bHXieV3EunChx&_rdc=1&_rdr&refsrc=deprecated" target="_blank"><i class="bi bi-facebook"></i></a>
                     </li>
                     <li>
-                      <a href="https://x.com/paskibra_yaj?t=vc_CfhRcRLKLlIVs6c79WQ&s=08"><i class="bi bi-twitter"></i></a>
+                      <a href="https://x.com/paskibra_yaj?t=vc_CfhRcRLKLlIVs6c79WQ&s=08" target="_blank"><i class="bi bi-twitter"></i></a>
                     </li>
                     <li>
-                      <a href="https://instagram.com/smkyaj_official?igshid=MzRlODBiNWFlZA=="><i class="bi bi-instagram"></i></a>
+                      <a href="https://instagram.com/smkyaj_official?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="https://youtube.com/@smkyajdepok2280?si=_wlsU_i7R_pV_h2L"><i class="bi bi-youtube"></i></a>
+                      <a href="https://youtube.com/@smkyajdepok2280?si=_wlsU_i7R_pV_h2L" target="_blank"><i class="bi bi-youtube"></i></a>
                     </li>
+                  </div>
                   </ul>
                 </div>
               </div>
@@ -36,10 +35,10 @@
               <div class="footer-head">
                 <h4>information</h4>
                 <p>
-                 We came to learn and follow the rules...
+                 We came to learn and follow the rules.
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> (021) 87900425</p>
+                  <p><span>Telephone:</span> (021) 87900425</p>
                   <p><span>Email:</span> @smkyajdepok.sch.id</p>
                   <p><span>Working Hours:</span> 07.00 - 15.15 WIB</p>
                 </div>
@@ -52,12 +51,19 @@
               <div class="footer-head">
                 <h4>Gallery</h4>
                 <div class="flicker-img">
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/santai.jpeg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/ykk.jpeg" alt=""></a>
+                <?php
+                foreach($gallery as $gallery){
+                ?>
+                  <a><img src="<?= base_url('assets/admin/img/pages/gallery/') . $gallery->gambar ?>" alt=""></a>
+                <?php
+                if ($gallery->id == 6) break;
+                }
+                ?>
+                  <!-- <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/ykk.jpeg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/wisuda.jpeg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/rps.jpeg" alt=""></a>
                   <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/duha.jpg" alt=""></a>
-                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/senam.jpg" alt=""></a>
+                  <a href="#"><img src="<?= base_url('assets/user/');?>img/portfolio/senam.jpg" alt=""></a> -->
                 </div>
               </div>
             </div>
@@ -71,7 +77,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>SMK YAJ</strong>. yayasan aridho jatimulya
+                &copy; Copyright <strong>SMK YAJ</strong>. All Rights Reserved
               </p>
             </div>
             <div class="credits">
@@ -81,7 +87,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
             -->
-              Designed by <a>ASLAB</a>
+              Designed by <strong>Aslab RPL XV</strong>
             </div>
           </div>
         </div>

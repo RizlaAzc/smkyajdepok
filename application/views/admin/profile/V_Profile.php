@@ -12,6 +12,8 @@
                         </ol>
                     </div>
 
+                    <?= $this->session->flashdata('message'); ?>
+
                     <section style="background-color: #eee;">
                         <div class="container py-4">
                             <!-- <div class="row">
@@ -113,7 +115,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <a href="<?= base_url('admin/profile/edit_profile') ?>" class="btn btn-primary shadow-sm">Edit Profile</a>
+                            <a href="<?= base_url('admin/edit_profile') ?>" class="btn btn-primary shadow-sm">Edit Profile</a>
                                 <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="card mb-4 mb-md-0">

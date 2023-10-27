@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class team extends CI_Controller {
+class quotes extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_Team');
+        $this->load->model('M_Quotes');
         $this->load->model('M_Contact');
 
         if (!$this->session->userdata('email')) {
@@ -22,14 +22,14 @@ class team extends CI_Controller {
         $data['pesan'] = $this->M_Contact->getDataContact();
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-		$title['title'] = "Team - CMS";
+		$title['title'] = "Quotes - CMS";
 
-        $data['team'] = $this->M_Team->getDataTeam();
+        $data['quotes'] = $this->M_Quotes->getDataQuotes();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar', $data);
-		$this->load->view('admin/pages/team/V_Team', $data);
+		$this->load->view('admin/pages/gallery/V_quotes', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 
@@ -39,14 +39,16 @@ class team extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $gambar = $_FILES ['gambar'];
+
         $nama = $this->input->post('nama');
         $jabatan = $this->input->post('jabatan');
+        $quotes = $this->input->post('quotes');
+        $gambar = $_FILES ['gambar'];
         
 
         if ($gambar = '') {
         } else {
-            $config['upload_path'] = 'assets/admin/img/pages/team';
+            $config['upload_path'] = 'assets/admin/img/pages/quotes';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload');
@@ -59,13 +61,15 @@ class team extends CI_Controller {
         }
 
         $ArrInsert = array(
-            'gambar' => $gambar,
+            
             'nama' => $nama,
-            'jabatan' => $jabatan
+            'jabatan' => $jabatan,
+            'quotes' => $quotes,
+            'gambar' => $gambar
         );
 
-        $this->M_Team->insertDataTeam($ArrInsert);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Team added successfully!</div>');
+        $this->M_Quotes->insertDataQuotes($ArrInsert);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Quotes added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 
@@ -115,8 +119,8 @@ class team extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->M_Team->hapusDataTeam($id);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Team has been successfully deleted!</div>');
+        $this->M_Quotes->hapusDataQuotes($id);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Quotes has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 }

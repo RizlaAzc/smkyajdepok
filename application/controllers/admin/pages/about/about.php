@@ -6,7 +6,8 @@ class about extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_about');
+        $this->load->model('M_About');
+        $this->load->model('M_Contact');
 
         if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
@@ -36,11 +37,12 @@ class about extends CI_Controller {
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "About - CMS";
 
-        $data['about'] = $this->model_about->getDataAbout();
+        $data['pesan'] = $this->M_Contact->getDataContact();
+        $data['about'] = $this->M_About->getDataAbout();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
-		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/templates/pages/V_Navbar', $data);
 		$this->load->view('admin/pages/about/V_About', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
@@ -50,9 +52,9 @@ class about extends CI_Controller {
 		$year['year'] = date('Y');
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-		$title['title'] = "About Edit - CMS";
+		$title['title'] = "Edit About - CMS";
 
-        $data['about_detail'] = $this->model_about->getDataAboutDetail($id);
+        $data['about_detail'] = $this->M_About->getDataAboutDetail($id);
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
@@ -89,7 +91,7 @@ class about extends CI_Controller {
             'gambar' => $gambar
         );
 
-        $this->model_about->insertDataAbout($ArrInsert);
+        $this->M_About->insertDataAbout($ArrInsert);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">About added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
@@ -131,16 +133,16 @@ class about extends CI_Controller {
             }
         }
 
-        $this->model_about->updateDataAbout($id, $ArrUpdate);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"About changed successfully!</div>');
-        redirect(base_url('admin/pages/about/about'));
+        $this->M_About->updateDataAbout($id, $ArrUpdate);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">About changed successfully!</div>');
+        redirect(base_url('admin/about'));
     }
 
     public function fungsi_hapus($id)
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->model_about->hapusDataAbout($id);
+        $this->M_About->hapusDataAbout($id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">About has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }

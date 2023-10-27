@@ -1,7 +1,7 @@
 <main id="main">
 
     <!-- ======= Blog Header ======= -->
-    <div class="header-bg page-area" style="background: url(<?= base_url('assets/user/img/portfolio/upacaraa.jpg') ?>);
+    <div class="header-bg page-area" style="background: url(<?= base_url('assets/user/img/portfolio/wisudaa.jpeg') ?>);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -12,10 +12,10 @@
             <div class="slider-content text-center">
               <div class="header-bottom">
                 <div class="layer2">
-                  <h1 class="title2">Gallery</h1>
+                  <h1 class="title2">Team</h1>
                 </div>
                 <div class="layer3">
-                  <h2 class="title3">All of YAJ Gallery</h2>
+                  <h2 class="title3">All of YAJ Team</h2>
                 </div>
               </div>
             </div>
@@ -48,32 +48,26 @@
           </div>
         </div>
 
-        <div class="row awesome-project-content portfolio-container">
-
-        <?php
-        foreach($gallery as $gallery){
-        ?>
-          <!-- portfolio-item start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="<?= base_url('assets/admin/img/pages/gallery/') . $gallery->gambar ?>" width="400" height="150" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="portfolio-lightbox" data-gallery="myGallery" href="<?= base_url('assets/admin/img/pages/gallery/') . $gallery->gambar ?>">
-                      <h4><?= $gallery->subjek ?></h4>
-                      <span></span>
-                    </a>
-                  </div>
-                </div>
+        <div class="row">
+          <?php
+          foreach($team as $team){
+          ?>
+          <div class="col-md-3 col-sm-3 col-xs-12 mb-4">
+            <div class="single-team-member">
+              <div class="team-img">
+                <a>
+                  <img src="<?= base_url('assets/admin/img/pages/team/') . $team->gambar ?>" alt="">
+                </a>
+              </div>
+              <div class="team-content text-center">
+                <h4><?= $team->nama ?></h4>
+                <p><?= $team->jabatan ?></p>
               </div>
             </div>
           </div>
-          <!-- portfolio-item end -->
-        <?php
-        }
-        ?>
-          
+          <?php
+          }
+          ?>
         </div>
       </div>
 

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class team extends CI_Controller {
+class gallery extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_Team');
+        $this->load->model('M_Gallery');
         $this->load->model('M_Contact');
 
         if (!$this->session->userdata('email')) {
@@ -15,6 +15,21 @@ class team extends CI_Controller {
         }
     }
 
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/userguide3/general/urls.html
+	 */
 	public function index()
 	{
 		$year['year'] = date('Y');
@@ -22,31 +37,49 @@ class team extends CI_Controller {
         $data['pesan'] = $this->M_Contact->getDataContact();
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-		$title['title'] = "Team - CMS";
+		$title['title'] = "Gallery - CMS";
 
-        $data['team'] = $this->M_Team->getDataTeam();
+        $data['gallery'] = $this->M_Gallery->getDataGallery();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar', $data);
-		$this->load->view('admin/pages/team/V_Team', $data);
+		$this->load->view('admin/pages/gallery/V_Gallery', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 
+	// public function edit()
+	// {
+	// 	if (!$this->session->userdata('email')) {
+    //         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
+    //         redirect('admin/auth');
+    //     }
 
+	// 	$year['year'] = date('Y');
+
+	// 	$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+	// 	$title['title'] = "Carousel Edit - CMS";
+
+    //     $data['carousel_detail'] = $this->model_carousel->getDataCarouselDetail();
+
+	// 	$this->load->view('admin/templates/pages/V_Head', $title);
+	// 	$this->load->view('admin/templates/pages/V_Sidebar', $title);
+	// 	$this->load->view('admin/templates/pages/V_Navbar');
+	// 	$this->load->view('admin/pages/carousel/V_Edit', $data);
+	// 	$this->load->view('admin/templates/pages/V_Footer', $year);
+	// }
 
     public function fungsi_tambah()
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $gambar = $_FILES ['gambar'];
-        $nama = $this->input->post('nama');
-        $jabatan = $this->input->post('jabatan');
-        
+        $subjek = $this->input->post('subjek');
+        // $deskripsi = $this->input->post('deskripsi');
+        $gambar = $_FILES['gambar'];
 
         if ($gambar = '') {
         } else {
-            $config['upload_path'] = 'assets/admin/img/pages/team';
+            $config['upload_path'] = 'assets/admin/img/pages/gallery';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload');
@@ -59,13 +92,13 @@ class team extends CI_Controller {
         }
 
         $ArrInsert = array(
-            'gambar' => $gambar,
-            'nama' => $nama,
-            'jabatan' => $jabatan
+            'subjek' => $subjek,
+            // 'deskripsi' => $deskripsi,
+            'gambar' => $gambar
         );
 
-        $this->M_Team->insertDataTeam($ArrInsert);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Team added successfully!</div>');
+        $this->M_Gallery->insertDataGallery($ArrInsert);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Gallery added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 
@@ -115,8 +148,8 @@ class team extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->M_Team->hapusDataTeam($id);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Team has been successfully deleted!</div>');
+        $this->M_Gallery->hapusDataGallery($id);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Gallery has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
 }

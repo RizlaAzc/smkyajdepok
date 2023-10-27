@@ -27,8 +27,8 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" width="1">No</th>
-                                            <th class="text-center" width="300">Subject</th>
-                                            <th class="text-center" width="400">Description</th>
+                                            <th class="text-center" width="700">Subject</th>
+                                            <!-- <th class="text-center" width=400">Description</th> -->
                                             <th class="text-center" width="100">Picture</th>
                                             <th class="text-center" width="74">Action</th>
                                         </tr>
@@ -37,7 +37,7 @@
                                         <tr>
                                             <th class="text-center">No</th>
                                             <th class="text-center">Subject</th>
-                                            <th class="text-center">Description</th>
+                                            <!-- <th class="text-center">Description</th> -->
                                             <th class="text-center">Picture</th>
                                             <th class="text-center">Action</th>
                                         </tr>
@@ -49,10 +49,10 @@
                                         ?>
                                         <tr>
                                             <td class="text-center" style="vertical-align: middle;"><?= $no++ ?></td>
-                                            <td style="vertical-align: middle;"><?= $gallery->subjek ?></td>
-                                            <td style="vertical-align: middle;"><?= $gallery->deskripsi ?></td>
+                                            <td class="text-center" style="vertical-align: middle;"><?= $gallery->subjek ?></td>
+                                            <!-- <td style="vertical-align: middle;"><?= $gallery->deskripsi ?></td> -->
                                             <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/gallery/') ?><?= $gallery->gambar ?>" width="75"></td>
-                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/gallery/fungsi_hapus/') . $gallery->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
+                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/gallery/gallery/fungsi_hapus/') . $gallery->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
                                              shadow-sm ml-1"><i class="fas fa-trash fa-sm text-white-50"></i></a></td>
                                         </tr>
                                         <?php
@@ -82,15 +82,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?= form_open_multipart('admin/pages/gallery/fungsi_tambah'); ?>
+                    <?= form_open_multipart('admin/pages/gallery/gallery/fungsi_tambah'); ?>
                     <div class="form-group">
                         <label for="inputAddress" class="form-label">Subject</label>
                         <input type="text" class="form-control" id="inputAddress" name="subjek" required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="inputAddress2" class="form-label">Description</label>
                         <input type="text" class="form-control" id="inputAddress2" name="deskripsi" required>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="inputCity" class="form-label">Picture</label>
                         <input type="file" class="form-control" style="padding-bottom: 36px;" id="inputCity" name="gambar" required>

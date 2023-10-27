@@ -80,7 +80,7 @@
                     <!-- <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div> -->
                   </div>
-                  <div class="text-center"><button type="submit" class="btn btn-success">Send Message</button></div>
+                  <div class="text-center"><button type="submit" class="btn btn-info text-light">Send Message</button></div>
                 </form>
               </div>
             </div>

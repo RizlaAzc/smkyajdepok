@@ -1,13 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dashboard extends CI_Controller {
+class Message extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_Contact');
-		date_default_timezone_set('Asia/Jakarta');
 
 		if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
@@ -30,19 +29,29 @@ class dashboard extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function index()
+	public function detail($id)
 	{
+		$data['pesan_detail'] = $this->M_Contact->getDataContactDetail($id);
 		$data['pesan'] = $this->M_Contact->getDataContact();
 
 		$year['year'] = date('Y');
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-		$title['title'] = "Dashboard - CMS";
+		$title['title'] = "Message - CMS";
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar', $data);
-		$this->load->view('admin/pages/V_Dashboard');
+		$this->load->view('admin/message/V_Message');
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
+
+	public function fungsi_hapus($id)
+    {
+        $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->M_Contact->hapusDataContact($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Message has been successfully deleted!</div>');
+        redirect('admin/dashboard');
+    }
 }

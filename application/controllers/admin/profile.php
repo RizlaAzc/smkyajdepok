@@ -6,6 +6,9 @@ class profile extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
+        $this->load->model('M_Contact');
+		
 		if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
             redirect('admin/auth');
@@ -31,26 +34,29 @@ class profile extends CI_Controller {
 	{
 		$year['year'] = date('Y');
 
+		$data['pesan'] = $this->M_Contact->getDataContact();
+		
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "Profile - CMS";
-
+		
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
-		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/templates/pages/V_Navbar', $data);
 		$this->load->view('admin/profile/V_Profile', $title);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
-
+	
 	public function edit_profile()
 	{
 		$year['year'] = date('Y');
+		$data['pesan'] = $this->M_Contact->getDataContact();
 
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "Edit Profile - CMS";
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
-		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/templates/pages/V_Navbar',$data);
 		$this->load->view('admin/profile/V_Edit', $title);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
@@ -103,7 +109,7 @@ class profile extends CI_Controller {
 		// $this->db->where('email', $email);
 		// $this->db->update('login');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">your profile has been updated!</div>');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your profile has been updated!</div>');
 		redirect('admin/profile');
 	}
 }

@@ -31,7 +31,7 @@
             
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Interface
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -44,17 +44,17 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Carousel:</h6>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/carousel') ?>">Carousel</a>
+                        <a class="collapse-item" href="<?= base_url('admin/carousel') ?>">Carousel</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">About:</h6>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/about/about') ?>">About</a>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/about/study') ?>">Study</a>
+                        <a class="collapse-item" href="<?= base_url('admin/about') ?>">About</a>
+                        <a class="collapse-item" href="<?= base_url('admin/study') ?>">Study</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Team:</h6>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/team') ?>">Team</a>
+                        <a class="collapse-item" href="<?= base_url('admin/team') ?>">Team</a>
                         <h6 class="collapse-header">Gallery:</h6>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/gallery') ?>">Gallery</a>
-                        <a class="collapse-item" href="<?= base_url('admin/pages/quotes') ?>">Quotes</a>
+                        <a class="collapse-item" href="<?= base_url('admin/gallery') ?>">Gallery</a>
+                        <a class="collapse-item" href="<?= base_url('admin/quotes') ?>">Quotes</a>
                         
                     </div>
                 </div>
@@ -68,12 +68,32 @@
 
                 <!-- Heading -->
             <div class="sidebar-heading">
+                Addons
+            </div>
+            
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/ppdb') ?>">
+                    <i class="fas fa-fw fa-file"></i>
+                    <span>Form PPDB</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/message') ?>">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>Message</span></a>
+            </li> -->
+
+                        <!-- Divider -->
+                        <hr class="sidebar-divider">
+
+                <!-- Heading -->
+            <div class="sidebar-heading">
                 Other
             </div>
             
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/auth/register') ?>">
+                <a class="nav-link" href="<?= base_url('admin/register') ?>">
                     <i class="fas fa-fw fa-key"></i>
                     <span>Register Account</span></a>
             </li>

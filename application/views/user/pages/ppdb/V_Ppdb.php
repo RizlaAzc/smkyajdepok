@@ -1,7 +1,11 @@
 <main id="main">
 
     <!-- ======= Blog Header ======= -->
-    <div class="header-bg page-area">
+    <div class="header-bg page-area" style="background: url(<?= base_url('assets/user/img/portfolio/rpss.jpeg') ?>);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 120px 0 60px;">
       <div class="container position-relative">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
@@ -26,6 +30,7 @@
     <div class="blog-page area-padding">
       <div class="container">
         <div class="row">
+        <?= $this->session->flashdata('pesan'); ?>
           
           <!-- Start  contact -->
           <div class="col-md-6">
@@ -392,7 +397,7 @@
               
 
 
-                    <div class="text-center"><br><button class="btn btn-primary" type="submit">Simpan Formulir Pendaftaran</button></div>
+                    <div class="text-center"><br><button class="btn btn-info text-light" type="submit">Kirim Form Pendaftaran</button></div>
               </div>
             </div>
             <!-- End Left contact -->

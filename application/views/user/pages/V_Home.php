@@ -1,5 +1,5 @@
   <!-- ======= hero Section ======= -->
-  <section id="hero">
+  <section id="home">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -10,12 +10,12 @@
         <?php
         foreach($carousel as $carousel){
         ?>
-          <div class="carousel-item active" style="background-image: <?= base_url("assets/admin/img/pages/carousel/") . $carousel->gambar ?>">
+          <div class="carousel-item active" style="background-image: url(<?= base_url('assets/admin/img/pages/carousel/') . $carousel->gambar ?>)">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown"><?= $carousel->subjek ?></h2>
                 <p class="animate__animated animate__fadeInUp"><?= $carousel->deskripsi ?></p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">GO</a>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">See More</a>
               </div>
             </div>
           </div>

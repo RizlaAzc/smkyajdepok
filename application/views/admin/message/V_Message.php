@@ -3,18 +3,13 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Edit About</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Message</h1>
                         
-                        <ol class="breadcrumb mb-0">
-                            <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">User</a></li> -->
-                            <li class="breadcrumb-item active" aria-current="page">Pages</li>
-                            <li class="breadcrumb-item"><a href="<?= base_url('admin/about') ?>">About</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Edit About</li>
-                        </ol>
+                        <!-- <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="<?= base_url('admin/profile') ?>">Your Profile</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
+                        </ol> -->
                     </div>
-
-                    <?= $this->session->flashdata('pesan'); ?>
 
                     <section style="background-color: #eee;">
                         <div class="container py-4">
@@ -25,23 +20,23 @@
                                 </div>
                             </div> -->
 
-                            <?= form_open_multipart('admin/pages/about/about/fungsi_edit'); ?>
+                            <?= form_open_multipart('admin/profile/proses_edit'); ?>
                             <div class="row">
-                            <div class="col-lg-4">
+                            <!-- <div class="col-lg-4">
                                 <div class="card mb-4">
                                 <div class="card-body text-center">
-                                    <img src="<?= base_url('assets/admin/img/pages/about/') .$about_detail->gambar ?>" alt="avatar"
-                                    class="img-fluid" style="width: 170px;">
-                                    <!-- <input class="form-control text-center" type="text" name="nama" value="<?= $profil['nama'] ?>"> -->
-                                    <!-- <hr> -->
-                                    <!-- <p class="text-muted mb-0">as</p>
+                                    <img src="<?= base_url('assets/admin/img/profil/') . $profil['foto']; ?>" alt="avatar"
+                                    class="rounded-circle img-fluid" style="width: 150px;">
+                                    <input class="form-control text-center" type="text" name="nama" value="<?= $profil['nama'] ?>">
+                                    <hr>
+                                    <p class="text-muted mb-0">as</p>
                                     <p class="text-muted">Web Admin</p> -->
                                     <!-- <div class="d-flex justify-content-center mb-2">
                                     <button type="button" class="btn btn-primary">Follow</button>
                                     <button type="button" class="btn btn-outline-primary ms-1">Message</button>
                                     </div> -->
-                                </div>
-                                </div>
+                                <!-- </div>
+                                </div> -->
                                 <!-- <div class="card mb-4 mb-lg-0">
                                 <div class="card-body p-0">
                                     <ul class="list-group list-group-flush rounded-3">
@@ -68,67 +63,67 @@
                                     </ul>
                                 </div>
                                 </div> -->
-                            </div>
-                            <div class="col-lg-8">
+                            <!-- </div> -->
+                            <div class="col-lg-12">
                                 <div class="card mb-4">
                                 <div class="card-body">
                                     <div class="row">
-                                    <div class="col-sm-3 my-auto">
+                                    <div class="col-sm-2 my-auto">
+                                        <p class="mb-0">Name</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" type="text" name="nama" value="<?= $pesan_detail->nama ?>"readonly>
+                                    </div>
+                                    <!-- </div> -->
+                                    <hr>
+                                    <!-- <div class="row"> -->
+                                        <div class="col-sm-1 my-auto">
+                                            <p class="mb-0">Email</p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input class="form-control" type="text" name="email" value="<?= $pesan_detail->email ?>" readonly>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                    <div class="col-sm-2 my-auto">
                                         <p class="mb-0">Subject</p>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="hidden" name="id" value="<?= $about_detail->id ?>">
-                                        <input class="form-control" type="text" name="subjek" value="<?= $about_detail->subjek ?>">
-                                    </div>
-                                    </div>
-                                    <!-- <hr>
-                                    <div class="row">
-                                    <div class="col-sm-3 my-auto">
-                                        <p class="mb-0">Email</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" name="email" value="<?= $profil['email'] ?>" readonly>
-                                    </div>
-                                    </div> -->
-                                    <hr>
-                                    <div class="row">
-                                    <div class="col-sm-3 my-auto">
-                                        <p class="mb-0">Description</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <textarea class="form-control" rows="4" name="deskripsi"><?= $about_detail->deskripsi ?></textarea>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" name="telepon" value="<?= $pesan_detail->subjek ?>"readonly>
                                     </div>
                                     </div>
                                     <hr>
                                     <div class="row">
-                                    <div class="col-sm-3 my-auto">
-                                        <p class="mb-0">Picture</p>
+                                    <div class="col-sm-2 my-auto">
+                                        <p class="mb-0">Message</p>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <input type="file" name="gambar">
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control"readonly><?= $pesan_detail->pesan ?></textarea>
                                     </div>
                                     </div>
                                     <!-- <hr>
                                     <div class="row">
-                                    <div class="col-sm-3 my-auto">
+                                    <div class="col-sm-2 my-auto">
                                         <p class="mb-0">Mobile</p>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" name="nama_lengkap" value="<?= $profil['nama_lengkap'] ?>">
+                                    <div class="col-sm-20">
+                                        <input class="form-control" type="text" name="nama_lengkap" value="">
                                     </div>
                                     </div> -->
-                                    <!-- <hr>
+                                    <hr>
                                     <div class="row">
-                                    <div class="col-sm-3 my-auto">
-                                        <p class="mb-0">Date Created</p>
+                                    <div class="col-sm-2 my-auto">
+                                        <p class="mb-0">Date</p>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="text" name="date_created" value="<?= $profil['date_created'] ?>" readonly>
-                                    </div> -->
-                                <!-- </div> -->
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" name="date_created" value="<?= $pesan_detail->date ?>" readonly>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary" type="submit">Confirm</button>
+                            <a href="<?= base_url('admin/message/fungsi_hapus/') . $pesan_detail->id ?>" class="btn btn-danger mr-3">Delete</a>
+                            <a href="<?= base_url('admin/dashboard') ?>" class="btn btn-primary">Confirm</a>
                                 <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="card mb-4 mb-md-0">

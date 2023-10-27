@@ -5,9 +5,12 @@ class home extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('model_carousel');
-		$this->load->model('model_about');
-		$this->load->model('model_gallery');
+		$this->load->model('M_Carousel');
+		$this->load->model('M_About');
+		$this->load->model('M_Study');
+		$this->load->model('M_Team');
+		$this->load->model('M_Gallery');
+		$this->load->model('M_Quotes');
 	}
 
 	/**
@@ -27,24 +30,30 @@ class home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['carousel'] = $this->model_carousel->getDataCarousel();
-		$data['about'] = $this->model_about->getDataAbout();
-		$gallery['gallery'] = $this->model_gallery->getDataGallery();
+		$data['carousel'] = $this->M_Carousel->getDataCarousel();
+		$data['about'] = $this->M_About->getDataAbout();
+		$data['study'] = $this->M_Study->getDataStudy();
+		$data['team'] = $this->M_Team->getDataTeam();
+		$data['gallery'] = $this->M_Gallery->getDataGallery();
+		// $data['gallery'] = $this->db->query("SELECT * from gallery ORDER BY id DESC")->result();
+		// $jumlah = $this->db->query("SELECT * from gallery ORDER BY id DESC")->num_rows();
+		// $data['jumlah'] = $jumlah;
+		// $total = $jumlah - 6;
+		// $data['total'] = $total;
+		$data['quotes'] = $this->M_Quotes->getDataQuotes();
 		
 		$title['title'] = "SMK YAJ Depok";
 		$this->load->view('user/templates/V_Head', $title);
 		$this->load->view('user/templates/V_Navbar');
 		$this->load->view('user/pages/V_Home', $data);
 		$this->load->view('user/pages/V_About', $data);
-		$this->load->view('user/pages/V_Services');
-		$this->load->view('user/pages/V_Team');
+		$this->load->view('user/pages/V_Visi-Misi-Motto');
+		$this->load->view('user/pages/V_Team', $data);
 		$this->load->view('user/pages/V_Reviews');
-		$this->load->view('user/pages/V_Portfolio');
-		$this->load->view('user/pages/V_Pricing');
-		$this->load->view('user/pages/V_Testimonials');
-		$this->load->view('user/pages/V_Blog');
+		$this->load->view('user/pages/V_Gallery', $data);
+		$this->load->view('user/pages/V_Quotes', $data);
 		$this->load->view('user/pages/V_Suscribe');
 		$this->load->view('user/pages/V_Contact');
-		$this->load->view('user/templates/V_Footer');
+		$this->load->view('user/templates/V_Footer', $data);
 	}
 }

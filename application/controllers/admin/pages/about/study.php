@@ -6,7 +6,8 @@ class study extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_study');
+        $this->load->model('M_Study');
+        $this->load->model('M_Contact');
 
         if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
@@ -36,11 +37,12 @@ class study extends CI_Controller {
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "Study - CMS";
 
-        $data['study'] = $this->model_study->getDataStudy();
+        $data['pesan'] = $this->M_Contact->getDataContact();
+        $data['study'] = $this->M_Study->getDataStudy();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
-		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/templates/pages/V_Navbar', $data);
 		$this->load->view('admin/pages/about/study/V_Study', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
@@ -90,7 +92,7 @@ class study extends CI_Controller {
             'jurusan' => $jurusan
         );
 
-        $this->model_study->insertDataStudy($ArrInsert);
+        $this->M_Study->insertDataStudy($ArrInsert);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Study added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
@@ -141,7 +143,7 @@ class study extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->model_study->hapusDataStudy($id);
+        $this->M_Study->hapusDataStudy($id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Study has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }

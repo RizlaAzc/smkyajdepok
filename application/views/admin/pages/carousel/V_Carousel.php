@@ -49,8 +49,8 @@
                                         ?>
                                         <tr>
                                             <td class="text-center" style="vertical-align: middle;"><?= $no++ ?></td>
-                                            <td style="vertical-align: middle;"><?= $carousel->subjek ?></td>
-                                            <td style="vertical-align: middle;"><?= $carousel->deskripsi ?></td>
+                                            <td class="text-center" style="vertical-align: middle;"><?= $carousel->subjek ?></td>
+                                            <td class="text-justify" style="vertical-align: middle;"><?= $carousel->deskripsi ?></td>
                                             <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/carousel/') ?><?= $carousel->gambar ?>" width="75"></td>
                                             <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/carousel/fungsi_hapus/') . $carousel->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
                                              shadow-sm ml-1"><i class="fas fa-trash fa-sm text-white-50"></i></a></td>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2" class="form-label">Description</label>
-                        <input type="text" class="form-control" id="inputAddress2" name="deskripsi" required>
+                        <textarea class="form-control" id="inputAddress2" name="deskripsi" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="inputCity" class="form-label">Picture</label>

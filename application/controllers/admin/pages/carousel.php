@@ -6,7 +6,8 @@ class carousel extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_carousel');
+        $this->load->model('M_Carousel');
+        $this->load->model('M_Contact');
 
         if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
@@ -36,11 +37,13 @@ class carousel extends CI_Controller {
 		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 		$title['title'] = "Carousel - CMS";
 
-        $data['carousel'] = $this->model_carousel->getDataCarousel();
+        $data['pesan'] = $this->M_Contact->getDataContact();
+
+        $data['carousel'] = $this->M_Carousel->getDataCarousel();
 
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
-		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/templates/pages/V_Navbar', $data);
 		$this->load->view('admin/pages/carousel/V_Carousel', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
@@ -57,7 +60,7 @@ class carousel extends CI_Controller {
 	// 	$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 	// 	$title['title'] = "Carousel Edit - CMS";
 
-    //     $data['carousel_detail'] = $this->model_carousel->getDataCarouselDetail();
+    //     $data['carousel_detail'] = $this->M_Carousel->getDataCarouselDetail();
 
 	// 	$this->load->view('admin/templates/pages/V_Head', $title);
 	// 	$this->load->view('admin/templates/pages/V_Sidebar', $title);
@@ -94,7 +97,7 @@ class carousel extends CI_Controller {
             'gambar' => $gambar
         );
 
-        $this->model_carousel->insertDataCarousel($ArrInsert);
+        $this->M_Carousel->insertDataCarousel($ArrInsert);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Carousel added successfully!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
@@ -136,7 +139,7 @@ class carousel extends CI_Controller {
     //         }
     //     }
 
-    //     $this->model_carousel->updateDataCarousel($id, $ArrUpdate);
+    //     $this->M_Carousel->updateDataCarousel($id, $ArrUpdate);
     //     $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"Carousel changed successfully!</div>');
     //     redirect(base_url('carousel'));
     // }
@@ -145,7 +148,7 @@ class carousel extends CI_Controller {
     {
         $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->model_carousel->hapusDataCarousel($id);
+        $this->M_Carousel->hapusDataCarousel($id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Carousel has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }

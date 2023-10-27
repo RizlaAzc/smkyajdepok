@@ -46,7 +46,7 @@ class auth extends CI_Controller {
 	public function goToDefaultPage()
 	{
 		if ($this->session->userdata('user_id') == 1) {
-			redirect('admin/auth');
+			redirect('admin');
 		}
 	}
 
@@ -76,17 +76,17 @@ class auth extends CI_Controller {
 				} else {
 
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">wrong password!</div>');
-					redirect('admin/auth');
+					redirect('admin');
 				}
 			} else {
 
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">this email has not been activated!</div>');
-				redirect('admin/auth');
+				redirect('admin');
 			}
 		} else {
 
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">email is not registered!</div>');
-			redirect('admin/auth');
+			redirect('admin');
 		}
 	}
 
@@ -95,7 +95,7 @@ class auth extends CI_Controller {
 	{
 		if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
-            redirect('admin/auth');
+            redirect('admin');
         }
 		
 		$this->form_validation->set_rules('nama', 'nama', 'required|trim');
@@ -147,8 +147,8 @@ class auth extends CI_Controller {
 		// $this->session->unset_unserdata('role_id');
 
 		$this->session->sess_destroy();
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">congratulation! Your account has been logout.</div>');
-		redirect('admin/auth');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your account has been logout.</div>');
+		redirect('admin');
 	}
 
 

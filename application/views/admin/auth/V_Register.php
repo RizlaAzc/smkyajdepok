@@ -68,15 +68,17 @@
                                 <h1 class="h4 text-gray-900 mb-4">Register - YAJ CMS</h1>
                                 <img src="<?= base_url('assets/admin/');?>img/smk.png" alt="YAJ Logo.png" style="width: 155px; margin-bottom: 40px;">
                             </div> -->
-                            <form class="user" method="post" action="<?= base_url('admin/auth/register'); ?>">
+                            <form class="user" method="post" action="<?= base_url('admin/register'); ?>">
                                 <div class="form-group row">
                                     <div class="col-sm-6">
                                         <input type="text" name="nama_lengkap" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="Full Name">
+                                            <?= form_error('nama_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" name="nama" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Nick Name">
+                                            <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -87,15 +89,16 @@
                                 <div class="form-group">
                                     <input type="text" name="telepon" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Phone Number">
+                                        <?= form_error('telepon', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" name="password1" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Password"><?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" name="password2" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            id="exampleRepeatPassword" placeholder="Repeat Password"><?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
