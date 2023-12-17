@@ -23,7 +23,7 @@
                             <div>
                                 <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-print"></i> Export</button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="<?= base_url('admin/study/excel') ?>">Excel</a></li>
+                                    <!-- <li><a class="dropdown-item" href="<?= base_url('admin/study/excel') ?>">Excel</a></li> -->
                                     <li><a class="dropdown-item" href="<?= base_url('admin/study/pdf') ?>">Pdf</a></li>
                                 </ul>
                                 <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Study</button>
