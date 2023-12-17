@@ -17,8 +17,17 @@
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">About Tables</h6>
+                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3"><div>
+                                <h6 class="m-0 font-weight-bold text-primary">About Tables</h6>
+                            </div>
+                            <div>
+                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-print"></i> Export</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/about/excel') ?>">Excel</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/about/pdf') ?>">Pdf</a></li>
+                                </ul>
+                                <!-- <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Carousel</button> -->
+                            </div>
                             <!-- <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add About</button> -->
                         </div>
                         <div class="card-body">

@@ -7,7 +7,17 @@
             <ol class="breadcrumb mb-0">
                 <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">User</a></li> -->
-                <li class="breadcrumb-item active" aria-current="page">Form PPDB</li>
+                <?php
+                if($jumlah_ppdb > 0){
+                    ?>
+                    <li class="breadcrumb-item active" aria-current="page">Form PPDB</li>
+                <?php
+                } else {
+                    ?>
+                    <li class="breadcrumb-item active" aria-current="page">No Form yet</li>
+                <?php
+                }
+                ?>
             </ol>
         </div>
 

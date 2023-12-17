@@ -146,5 +146,75 @@ class about extends CI_Controller {
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">About has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
     }
+
+    public function excel()
+    {
+        $baris = 2;
+        $no = 1;
+        $filename = "Data About" . '.xlsx';
+        $queryAllAbout = $this->M_About->getDataAbout();
+
+        require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel.php');
+        require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
+
+        $object = new PHPExcel();
+        $object->getProperties()->setCreator("SMK YAJ Depok");
+        $object->getProperties()->setLastModifiedBy("SMK YAJ Depok");
+        $object->getProperties()->setTitle("Data About");
+        $object->setActiveSheetIndex(0);
+        $object->getActiveSheet()->setCellValue('A1', 'No');
+        $object->getActiveSheet()->setCellValue('B1', 'Subject');
+        $object->getActiveSheet()->setCellValue('C1', 'Description');
+        $object->getActiveSheet()->setTitle("Data About");
+
+        foreach ($queryAllAbout as $dataabout) {
+            $object->getActiveSheet()->setCellValue('A' . $baris, $no++);
+            $object->getActiveSheet()->setCellValue('B' . $baris, $dataabout->subjek);
+            $object->getActiveSheet()->setCellValue('C' . $baris, $dataabout->deskripsi);
+
+            $baris++;
+        }
+
+        for ($col = 'A'; $col !== 'C'; $col++) {
+            $object->getActiveSheet()
+                ->getColumnDimension($col)
+                ->setAutoSize(true);
+        }
+
+        $styleArrayFirstRow = [
+            'font' => [
+                'bold' => true,
+            ]
+        ];
+
+        $highestColumn = $object->getActiveSheet()->getHighestColumn();
+        $object->getActiveSheet()->getStyle('A1:' . $highestColumn . '1')->applyFromArray($styleArrayFirstRow);
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheet');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+
+        $writer = PHPExcel_IOFactory::createwriter($object, 'Excel2007');
+        $writer->save('php://output');
+
+        exit;
+    }
+
+    public function pdf()
+    {
+        $queryAllAbout = $this->M_About->getDataAbout();
+        $DATA['queryAllAbout'] = $queryAllAbout;
+        $this->load->library('dompdf_gen');
+        $this->load->view('admin/pages/about/pdf', $DATA);
+
+        $paper_size = 'A4';
+        $orientation = 'landscape';
+        $html = $this->output->get_output();
+
+        $this->dompdf->set_paper($paper_size, $orientation);
+        $this->dompdf->load_html($html);
+        $this->dompdf->render();
+        $this->dompdf->stream('Data About.pdf', array('Attachment' => 0));
+    }
 }
 

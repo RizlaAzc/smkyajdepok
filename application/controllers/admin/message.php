@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Message extends CI_Controller {
+class message extends CI_Controller {
 
 	public function __construct()
 	{
@@ -29,6 +29,25 @@ class Message extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	 public function index()
+	{
+		$data['pesan'] = $this->M_Contact->getDataContact();
+		$data['jumlah_pesan'] = $this->db->query('SELECT id from pesan')->num_rows();
+		// $data['ppdb'] = $this->M_Ppdb->getDataPpdb();
+
+		$year['year'] = date('Y');
+
+		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+		$title['title'] = "Message - CMS";
+
+		$this->load->view('admin/templates/pages/V_Head', $title);
+		$this->load->view('admin/templates/pages/V_Sidebar', $title);
+		$this->load->view('admin/templates/pages/V_Navbar', $data);
+		$this->load->view('admin/message/V_Message', $data);
+		$this->load->view('admin/templates/pages/V_Footer', $year);
+	}
+
 	public function detail($id)
 	{
 		$data['pesan_detail'] = $this->M_Contact->getDataContactDetail($id);
@@ -42,7 +61,7 @@ class Message extends CI_Controller {
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar', $data);
-		$this->load->view('admin/message/V_Message');
+		$this->load->view('admin/message/V_Message_Detail', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 
@@ -52,6 +71,6 @@ class Message extends CI_Controller {
 
         $this->M_Contact->hapusDataContact($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Message has been successfully deleted!</div>');
-        redirect('admin/dashboard');
+        redirect('admin/message');
     }
 }

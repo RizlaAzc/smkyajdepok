@@ -75,7 +75,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/ppdb') ?>">
                     <i class="fas fa-fw fa-file"></i>
-                    <span>Form PPDB</span></a>
+                    <span>PPDB</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/message') ?>">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>Message</span></a>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/message') ?>">

@@ -35,6 +35,7 @@ class ppdb extends CI_Controller {
 	{
 		$data['pesan'] = $this->M_Contact->getDataContact();
 		$data['ppdb'] = $this->M_Ppdb->getDataPpdb();
+		$data['jumlah_ppdb'] = $this->db->query('SELECT nisn from ppdb')->num_rows();
 
 		$year['year'] = date('Y');
 
@@ -44,7 +45,7 @@ class ppdb extends CI_Controller {
 		$this->load->view('admin/templates/pages/V_Head', $title);
 		$this->load->view('admin/templates/pages/V_Sidebar', $title);
 		$this->load->view('admin/templates/pages/V_Navbar', $data);
-		$this->load->view('admin/Ppdb/V_Ppdb');
+		$this->load->view('admin/Ppdb/V_Ppdb', $data);
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 

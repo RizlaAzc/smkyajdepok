@@ -47,26 +47,21 @@ class study extends CI_Controller {
 		$this->load->view('admin/templates/pages/V_Footer', $year);
 	}
 
-	// public function edit()
-	// {
-	// 	if (!$this->session->userdata('email')) {
-    //         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
-    //         redirect('admin/auth');
-    //     }
+	public function edit($id)
+	{
+		$year['year'] = date('Y');
 
-	// 	$year['year'] = date('Y');
+		$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+		$title['title'] = "Edit Study - CMS";
 
-	// 	$title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-	// 	$title['title'] = "Carousel Edit - CMS";
+        $data['study_detail'] = $this->M_Study->getDataStudyDetail($id);
 
-    //     $data['carousel_detail'] = $this->model_carousel->getDataCarouselDetail();
-
-	// 	$this->load->view('admin/templates/pages/V_Head', $title);
-	// 	$this->load->view('admin/templates/pages/V_Sidebar', $title);
-	// 	$this->load->view('admin/templates/pages/V_Navbar');
-	// 	$this->load->view('admin/pages/carousel/V_Edit', $data);
-	// 	$this->load->view('admin/templates/pages/V_Footer', $year);
-	// }
+		$this->load->view('admin/templates/pages/V_Head', $title);
+		$this->load->view('admin/templates/pages/V_Sidebar', $title);
+		$this->load->view('admin/templates/pages/V_Navbar');
+		$this->load->view('admin/pages/about/study/V_Edit', $data);
+		$this->load->view('admin/templates/pages/V_Footer', $year);
+	}
 
     public function fungsi_tambah()
     {
@@ -97,47 +92,21 @@ class study extends CI_Controller {
         redirect($_SERVER['HTTP_REFERER']);
     }
 
-    // public function fungsi_edit()
-    // {
-    //     $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-    //     $id = $this->input->post('id');
-    //     $subjek = $this->input->post('subjek');
-    //     $deskripsi = $this->input->post('deskripsi');
-    //     $gambar = $_FILES['gambar'];
+    public function fungsi_edit()
+    {
+        $title['profil'] = $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+        $id = $this->input->post('id');
+        $jurusan = $this->input->post('jurusan');
 
-    //     if ($gambar = '') {
-    //         $ArrUpdate = array(
-    //             'id' => $id,
-    //             'subjek' => $subjek,
-    //             'deskripsi' => $deskripsi
-    //         );
-    //     } else {
-    //         $config['upload_path'] = 'assets/admin/img/pages/carousel';
-    //         $config['allowed_types'] = 'jpg|png|jpeg';
+        $ArrUpdate = array(
+            'id' => $id,
+            'jurusan' => $jurusan
+        );
 
-    //         $this->load->library('upload');
-    //         $this->upload->initialize($config);
-    //         if (!$this->upload->do_upload('gambar')) {
-    //             $ArrUpdate = array(
-    //                 'id' => $id,
-    //                 'subjek' => $subjek,
-    //                 'deskripsi' => $deskripsi
-    //             );
-    //         } else {
-    //             $gambar = $this->upload->data('file_name');
-    //             $ArrUpdate = array(
-    //                 'id' => $id,
-    //                 'subjek' => $subjek,
-    //                 'deskripsi' => $deskripsi,
-    //                 'gambar' => $gambar
-    //             );
-    //         }
-    //     }
-
-    //     $this->model_carousel->updateDataCarousel($id, $ArrUpdate);
-    //     $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"Carousel changed successfully!</div>');
-    //     redirect(base_url('carousel'));
-    // }
+        $this->M_Study->updateDataStudy($id, $ArrUpdate);
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Study changed successfully!</div>');
+        redirect(base_url('admin/study'));
+    }
 
     public function fungsi_hapus($id)
     {
@@ -146,6 +115,74 @@ class study extends CI_Controller {
         $this->M_Study->hapusDataStudy($id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Study has been successfully deleted!</div>');
         redirect($_SERVER['HTTP_REFERER']);
+    }
+
+    public function excel()
+    {
+        $baris = 2;
+        $no = 1;
+        $filename = "Data Study" . '.xlsx';
+        $queryAllStudy = $this->M_Study->getDataStudy();
+
+        require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel.php');
+        require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
+
+        $object = new PHPExcel();
+        $object->getProperties()->setCreator("SMK YAJ Depok");
+        $object->getProperties()->setLastModifiedBy("SMK YAJ Depok");
+        $object->getProperties()->setTitle("Data Study");
+        $object->setActiveSheetIndex(0);
+        $object->getActiveSheet()->setCellValue('A1', 'No');
+        $object->getActiveSheet()->setCellValue('B1', 'Study');
+        $object->getActiveSheet()->setTitle("Data Study");
+
+        foreach ($queryAllStudy as $datastudy) {
+            $object->getActiveSheet()->setCellValue('A' . $baris, $no++);
+            $object->getActiveSheet()->setCellValue('B' . $baris, $datastudy->jurusan);
+
+            $baris++;
+        }
+
+        for ($col = 'A'; $col !== 'B'; $col++) {
+            $object->getActiveSheet()
+                ->getColumnDimension($col)
+                ->setAutoSize(true);
+        }
+
+        $styleArrayFirstRow = [
+            'font' => [
+                'bold' => true,
+            ]
+        ];
+
+        $highestColumn = $object->getActiveSheet()->getHighestColumn();
+        $object->getActiveSheet()->getStyle('A1:' . $highestColumn . '1')->applyFromArray($styleArrayFirstRow);
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheet');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+
+        $writer = PHPExcel_IOFactory::createwriter($object, 'Excel2007');
+        $writer->save('php://output');
+
+        exit;
+    }
+
+    public function pdf()
+    {
+        $queryAllStudy = $this->M_Study->getDataStudy();
+        $DATA['queryAllStudy'] = $queryAllStudy;
+        $this->load->library('dompdf_gen');
+        $this->load->view('admin/pages/about/study/pdf', $DATA);
+
+        $paper_size = 'A4';
+        $orientation = 'landscape';
+        $html = $this->output->get_output();
+
+        $this->dompdf->set_paper($paper_size, $orientation);
+        $this->dompdf->load_html($html);
+        $this->dompdf->render();
+        $this->dompdf->stream('Data Study.pdf', array('Attachment' => 0));
     }
 }
 

@@ -55,13 +55,34 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/auth';
 $route['admin/register'] = 'admin/auth/register';
-$route['admin/edit_profile'] = 'admin/profile/edit_profile';
+
 $route['admin/carousel'] = 'admin/pages/carousel';
 $route['admin/about'] = 'admin/pages/about/about';
 $route['admin/study'] = 'admin/pages/about/study';
 $route['admin/team'] = 'admin/pages/team';
 $route['admin/gallery'] = 'admin/pages/gallery/gallery';
 $route['admin/quotes'] = 'admin/pages/gallery/quotes';
-$route['admin/edit_about/(:any)'] = 'admin/pages/about/about/edit/$1';
-$route['admin/message/(:any)'] = 'admin/message/detail/$1';
+
 $route['admin/ppdb/(:any)'] = 'admin/ppdb/detail/$1';
+$route['admin/message/(:any)'] = 'admin/message/detail/$1';
+
+$route['admin/edit_profile'] = 'admin/profile/edit_profile';
+$route['admin/edit_carousel/(:any)'] = 'admin/pages/carousel/edit/$1';
+$route['admin/edit_about/(:any)'] = 'admin/pages/about/about/edit/$1';
+$route['admin/edit_study/(:any)'] = 'admin/pages/about/study/edit/$1';
+$route['admin/edit_team/(:any)'] = 'admin/pages/team/edit/$1';
+$route['admin/edit_gallery/(:any)'] = 'admin/pages/gallery/gallery/edit/$1';
+$route['admin/edit_quotes/(:any)'] = 'admin/pages/gallery/quotes/edit/$1';
+
+$route['admin/carousel/excel'] = 'admin/pages/carousel/excel';
+$route['admin/carousel/pdf'] = 'admin/pages/carousel/pdf';
+$route['admin/about/excel'] = 'admin/pages/about/about/excel';
+$route['admin/about/pdf'] = 'admin/pages/about/about/pdf';
+$route['admin/study/excel'] = 'admin/pages/about/study/excel';
+$route['admin/study/pdf'] = 'admin/pages/about/study/pdf';
+$route['admin/team/excel'] = 'admin/pages/team/excel';
+$route['admin/team/pdf'] = 'admin/pages/team/pdf';
+$route['admin/gallery/excel'] = 'admin/pages/gallery/gallery/excel';
+$route['admin/gallery/pdf'] = 'admin/pages/gallery/gallery/pdf';
+$route['admin/quotes/excel'] = 'admin/pages/gallery/quotes/excel';
+$route['admin/quotes/pdf'] = 'admin/pages/gallery/quotes/pdf';

@@ -17,9 +17,18 @@
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Quotes Tables</h6>
-                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Quotes</button>
+                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3"><div>
+                                <h6 class="m-0 font-weight-bold text-primary">Quotes Tables</h6>
+                            </div>
+                            <div>
+                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-print"></i> Export</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/quotes/excel') ?>">Excel</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/quotes/pdf') ?>">Pdf</a></li>
+                                </ul>
+                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Quotes</button>
+                            </div>
+                            <!-- <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Quotes</button> -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -31,7 +40,7 @@
                                             <th class="text-center" width="200">Position</th>
                                             <th class="text-center" width="300">Quotes</th>
                                             <th class="text-center" width="100">Picture</th>
-                                            <th class="text-center" width="74">Action</th>
+                                            <th class="text-center" width="95">Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -55,7 +64,8 @@
                                             <td class="text-center" style="vertical-align: middle;"><?= $quotes->jabatan ?></td>
                                             <td class="text-center" style="vertical-align: middle;"><?= $quotes->quotes ?></td>
                                             <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/quotes/') ?><?= $quotes->gambar ?>" width="75"></td>
-                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/gallery/quotes/fungsi_hapus/') . $quotes->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
+                                            <td class="text-center m-5" style="vertical-align: middle;"><a style="margin-right: 4px;" href="<?= base_url('admin/edit_quotes/') . $quotes->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary
+                                             shadow-sm ml-1"><i class="fas fa-pen fa-sm text-white-50"></i></a><a style="margin-left: 4px;" href="<?= base_url('admin/pages/gallery/quotes/fungsi_hapus/') . $quotes->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
                                              shadow-sm ml-1"><i class="fas fa-trash fa-sm text-white-50"></i></a></td>
                                         </tr>
                                         <?php

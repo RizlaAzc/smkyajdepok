@@ -17,9 +17,18 @@
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Team Tables</h6>
-                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Team</button>
+                        <div class="d-sm-flex align-items-center justify-content-between card-header py-3"><div>
+                                <h6 class="m-0 font-weight-bold text-primary">Team Tables</h6>
+                            </div>
+                            <div>
+                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-print"></i> Export</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/team/excel') ?>">Excel</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url('admin/team/pdf') ?>">Pdf</a></li>
+                                </ul>
+                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Team</button>
+                            </div>
+                            <!-- <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-download fa-sm text-white-50"></i> Add Team</button> -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -27,10 +36,10 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" width="1">No</th>
-                                            <th class="text-center" width="400">Name</th>
-                                            <th class="text-center" width="300">Position</th>
+                                            <th class="text-center" width="350">Name</th>
+                                            <th class="text-center" width="350">Position</th>
                                             <th class="text-center" width="100">Picture</th>
-                                            <th class="text-center" width="74">Action</th>
+                                            <th class="text-center" width="95">Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -52,7 +61,8 @@
                                             <td class="text-center" style="vertical-align: middle;"><?= $team->nama ?></td>
                                             <td class="text-center" style="vertical-align: middle;"><?= $team->jabatan ?></td>
                                             <td class="text-center" style="vertical-align: middle;"><img src="<?= base_url('assets/admin/img/pages/team/') ?><?= $team->gambar ?>" width="75"></td>
-                                            <td class="text-center m-5" style="vertical-align: middle;"><a href="<?= base_url('admin/pages/team/fungsi_hapus/') . $team->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
+                                            <td class="text-center m-5" style="vertical-align: middle;"><a style="margin-right: 4px;" href="<?= base_url('admin/edit_team/') . $team->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary
+                                             shadow-sm ml-1"><i class="fas fa-pen fa-sm text-white-50"></i></a><a style="margin-left: 4px;" href="<?= base_url('admin/pages/team/fungsi_hapus/') . $team->id ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger
                                              shadow-sm ml-1"><i class="fas fa-trash fa-sm text-white-50"></i></a></td>
                                         </tr>
                                         <?php
